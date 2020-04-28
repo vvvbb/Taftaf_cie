@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Cie Taf-Taf</title>
+    <meta name="description" content="Cie Taf-Taf" />
+    <meta name="author" content="Vincent Bartissol" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="//db.onlinewebfonts.com/c/6fcade7abbedc0b15b45d46f0b8eca84?family=CoquetteW00-Light"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+    <!-- <link rel="stylesheet" href="css/w3.css">
+
+	<link rel="stylesheet" href="css/normalize.css"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="css/lightslider.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/> -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css.map"/> -->
+
+    <link rel="stylesheet" href="css/style1.css?v=1.0" />
+  </head>
+
+  <body>
+    <img src="./img/envelope.png" alt="" id="envelope" />
+
+    <section id="accueil">
+      <!-- <img src="./img/logo_cie_taftaf_v2.png" alt="logo_cie_taftaf" id="logo_cie_taftaf"> -->
+      <h1>Taf Taf Cie</h1>
+      <div id="accueil_middle">
+        <div id="PerspectiveandTransform1"></div>
+        <div id="PerspectiveandTransform2"></div>
+        <img
+          src="./img/page1_accueil1.jpg"
+          alt="page1_accueil1.jpg"
+          id="Transform1"
+        />
+        <img
+          src="./img/page1_accueil2.jpg"
+          alt="page1_accueil2.jpg"
+          id="Transform2"
+        />
+      </div>
+    </section>
+
+    <section id="spectacle">
+      <div id="spectacle_square_top"></div>
+      <div id="spectacle_square_bottom"></div>
+      <div class="accordion">
+        <div class="card" id="lesSaturnales">
+          <img src="./img/page2_spectacle1.jpg" alt="Les Saturnales" />
+          <div class="card__head">Les Saturnales</div>
+        </div>
+        <div class="card" id="aperosSwing">
+          <img src="./img/page2_spectacle4.jpg" alt="Les Apéros swing" />
+          <div class="card__head">Les Apéros swing</div>
+        </div>
+        <div class="card" id="leCrepusculeDuHerisson">
+          <img
+            src="./img/page2_spectacle2.jpg"
+            alt="Le crépuscule du hérisson"
+          />
+          <div class="card__head">Le crépuscule du hérisson</div>
+        </div>
+        <div class="card" id="tempsQuAffaires">
+          <img src="./img/page2_spectacle5.jpg" alt="À TemPs" />
+          <div class="card__head">À TemPs</div>
+        </div>
+      </div>
+
+      <!-- The Modal Les Saturnales-->
+      <div id="myModal_Saturnales" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Les Saturnales</h2>
+          <p>Chansons poétiquement engagées</p>
+          <p class="modal-center">
+            Chansons caustiques en acoustique<br />
+            <iframe
+              src="https://player.vimeo.com/video/113336631?title=0&byline=0&portrait=0"
+              width="640"
+              height="481"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </p>
+        </div>
+      </div>
+      <!-- The Modal Les Apéros swing-->
+      <div id="myModal_Aperosswing" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Les Apéros swing</h2>
+          <p>La Cie revisite les standards musicaux</p>
+          <p>
+            Ça chante autant que des cigales cherchant à prolonger l'été<br />
+            Ça swing autant qu'une volée d'hirondelles annonçant le printemps<br />
+            Ça danse autant qu'un tourbillon de feuilles mortes à l'automne<br />
+            Ça boit autant qu'un troupeau de chameaux tentant de se préserver de
+            la bise hivernale<br />
+            Ça joue à toutes les saisons, mais c'est pas du Vivaldi!<br />
+          </p>
+
+          <!-- 	        <div class="carousel">
+			    <ul id="lightSlider">
+			        <li data-thumb="./img/page2_aperoswing1.jpg">
+			            <img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/>
+			        </li>
+			        <li data-thumb="./img/page2_aperoswing2.jpg">
+			            <img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/>
+			        </li>
+			        <li data-thumb="./img/page2_aperoswing3.jpg">
+			            <img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/>
+			        </li>
+			        <li data-thumb="./img/page2_aperoswing4.jpg">
+			            <img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/>
+			        </li>
+			        <li data-thumb="./img/page2_aperoswing5.jpg">
+			            <img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/>
+			        </li>
+			    </ul>
+			</div> -->
+
+          <div class="carousel">
+            <div>
+              <img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1" />
+            </div>
+            <div>
+              <img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2" />
+            </div>
+            <div>
+              <img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3" />
+            </div>
+            <div>
+              <img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4" />
+            </div>
+            <div>
+              <img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5" />
+            </div>
+          </div>
+
+          <!-- 			<div class="carousel">
+				<div class="slider slider-for" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "fade:" true, "asNavFor": .slider-nav }' >
+					<div><img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/></div>
+					<div><img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/></div>
+					<div><img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/></div>
+					<div><img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/></div>
+					<div><img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/></div>
+				</div>
+				<div class="slider slider-nav" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": false, "focusOnSelect:" true, "asNavFor": .slider-for }' >
+					<div><img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/></div>
+					<div><img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/></div>
+					<div><img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/></div>
+					<div><img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/></div>
+					<div><img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/></div>
+				</div>
+			</div> -->
+        </div>
+      </div>
+      <!-- The Modal Le Crépuscule des Hérissons-->
+      <div id="myModal_Herisson" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Le Crépuscule des Hérissons</h2>
+          <p>Une fable silencieusement burlesque, tout public, durée 1h</p>
+          <p style="max-width: 1000px; margin: auto; text-align: justify;">
+            <!-- <p> -->
+            Au beau milieu de n'importe où, adossée au centre d'une vieille
+            palissade de bois vermoulu, trône majestueusement une benne à
+            déchets. Survient l'orage, et avec lui la nécessité de s'abriter. Ce
+            sera le point de départ d'une rencontre insolite entre deux
+            personnages, deux gentilshommes de fortune qui n'ont manifestement
+            plus d'endroit précis où se rendre.<br />
+            Commence alors un lent processus d'apprivoisement, qui conduira à un
+            véritable périple initiatique au cœur de la relation humaine, tantôt
+            solidaire tantôt toxique, porté par deux comédiens auxquels il ne
+            manque que la parole... ou presque.<br />
+            Même face à une urgence commune, il n'est guère facile de se
+            rapprocher de l'autre quand on est un hérisson.<br /><br />
+          </p>
+          <p class="modal-center">
+            Bande Annonce<br />
+            <iframe
+              src="https://player.vimeo.com/video/106157514?title=0&byline=0&portrait=0"
+              width="640"
+              height="480"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </p>
+          <p style="font-style: italic;">
+            « Par une froide journée d’hiver, un troupeau de porcs-épics s’était
+            mis en groupe serré pour se garantir mutuellement contre la gelée
+            par leur propre chaleur. Mais tout aussitôt ils ressentirent les
+            atteintes de leurs piquants, ce qui les fit s’éloigner les uns des
+            autres. »<br /><span style="float: right;"
+              >Arthur Schopenhauer</span
+            >
+          </p>
+          <p class="modal-center">
+            Teaser<br />
+            <iframe
+              src="https://player.vimeo.com/video/122188323?title=0&byline=0&portrait=0"
+              width="640"
+              height="360"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+            ></iframe>
+          </p>
+          <p>
+            <a
+              href="./img/dossier_Crepuscule_des_Herissons.pdf"
+              download
+              target="_blank"
+              >télécharger le dossier du spectacle</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- The Modal Temps Qu'Affaires-->
+      <div id="myModal_Temps" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>À TemPs</h2>
+          <p>Une épopée tout public, fantasque et musicale</p>
+          <p>
+            Spectacle en création
+          </p>
+          <img
+            src="./img/page2_spectacle6.jpg"
+            alt="À TemPs"
+            style="display: flex; margin: auto;"
+          />
+          <p>
+            <a href="./img/dossier_aTemPs.pdf" download target="_blank"
+              >télécharger le dossier du spectacle</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portrait">
+      <div id="portrait_rect_left"></div>
+      <div id="portrait_rect_right"></div>
+
+      <div class="portrait_grid">
+        <div class="portrait_col card_cp">
+          <!-- <div class="portrait_row portrait_img">
+					<img src="./img/page3_portrait1.jpg" alt="Christophe Perraudeau">
+				</div> -->
+          <div class="portrait_row portrait_img_float1">
+            <img src="./img/page3_portrait3.png" alt="Christophe Perraudeau" />
+          </div>
+          <div class="portrait_row">
+            <p class="portrait_name">Christophe Perraudeau</p>
+          </div>
+          <div class="portrait_row">
+            <p class="portrait_description">
+              Comédien jongleur formé au Samovar et aux arènes de Nanterre, puis
+              déformé sur le tas par les rencontres de toutes sortes, les
+              stages, les spectacles et autres expériences... Il intervient dans
+              les compagnies : l’Arbre à nomades, les Offs, la Muse Gueule, les
+              Croques Mules, la Fabrique à Spectacle... Il est également auteur
+              - compositeur - interprète des Saturnales, son projet de chansons
+              françaises déjantées.
+            </p>
+          </div>
+        </div>
+
+        <div class="portrait_col card_js">
+          <!-- <div class="portrait_row portrait_img">
+					<img src="./img/page3_portrait2.jpg" alt="Josselin Syllard">
+				</div> -->
+          <div class="portrait_row portrait_img_float2">
+            <img src="./img/page3_portrait4.png" alt="Josselin Syllard" />
+          </div>
+          <div class="portrait_row">
+            <p class="portrait_name">Josselin Syllard</p>
+          </div>
+          <div class="portrait_row">
+            <p class="portrait_description">
+              Musicien acrobate formé par José Meson et Lucio Nicolodi, puis
+              déformé sur le tas par des danseurs, des mimes, des jongleurs, des
+              spectacles et autres expériences... Il monte deux numéros
+              acrobatiques, Nuit blanche et Table Time, intervient dans les
+              compagnies Pesce Crudo et Alberte Reynaud, passe par le Moulin
+              rouge ou l’Opéra de Massy, danse dans un clip pour honorer la
+              mémoire de Michael Jackson, fait l’acrobate dans le film Vénus
+              Noire... Il est également auteur - compositeur - interprète - à
+              ses heures perdues.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row portrait_description_cie"><p>La Cie taf taf est née en 2006, à l’occasion de la création du spectacle Tant qu’Affaires par Christophe Perraudeau. Un solo circo-burlesque tout public d’une heure, sous forme de satire du monde du travail. Quelques années de routes et festivals plus tard, Christophe rencontre son futur partenaire, Josselin Syllard, dans des circonstances particulières qui leur apparaît à tous deux comme une sorte d’évidence, un point de convergence énergétique.</p></div> -->
+    </section>
+
+    <section id="gallerie">
+      <p class="gallerie_text">Gallerie</p>
+      <div class="gallerie_triangle1"></div>
+      <div class="gallerie_triangle2"></div>
+
+      <div class="grid">
+        <div class="gallerie_border"></div>
+        <div class="row">
+          <div class="column">
+            <a data-fancybox="gallery" href="./img/page4_gallerie1.jpg"
+              ><img src="./img/page4_gallerie1.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie2.jpg"
+              ><img src="./img/page4_gallerie2.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie3.jpg"
+              ><img src="./img/page4_gallerie3.jpg" alt=""
+            /></a>
+          </div>
+          <div class="column">
+            <!-- <a data-fancybox="gallery" href="./img/page4_gallerie4.jpg"><img src="./img/page4_gallerie4.jpg"></a> -->
+            <a data-fancybox="gallery" href="./img/page4_gallerie23.jpg"
+              ><img src="./img/page4_gallerie23.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie12.jpg"
+              ><img src="./img/page4_gallerie12.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie20.jpg"
+              ><img src="./img/page4_gallerie20.jpg" alt=""
+            /></a>
+          </div>
+          <div class="column">
+            <a data-fancybox="gallery" href="./img/page1_accueil3.jpg"
+              ><img src="./img/page1_accueil3.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie7.jpg"
+              ><img src="./img/page4_gallerie7.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie8.jpg"
+              ><img src="./img/page4_gallerie8.jpg" alt=""
+            /></a>
+          </div>
+          <div class="column">
+            <a data-fancybox="gallery" href="./img/page4_gallerie28.jpg"
+              ><img src="./img/page4_gallerie28.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie10.jpg"
+              ><img src="./img/page4_gallerie10.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie22.jpg"
+              ><img src="./img/page4_gallerie22.jpg" alt=""
+            /></a>
+          </div>
+          <div class="column">
+            <a data-fancybox="gallery" href="./img/page4_gallerie11.jpg"
+              ><img src="./img/page4_gallerie11.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie24.jpg"
+              ><img src="./img/page4_gallerie24.jpg" alt=""
+            /></a>
+            <a data-fancybox="gallery" href="./img/page4_gallerie5.jpg"
+              ><img src="./img/page4_gallerie5.jpg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div id="contact_square_top"></div>
+      <div id="contact_square_bottom"></div>
+      <div>
+        <!-- <p>Sites amis :<br><br>
+				<a href="http://www.animakt.fr/">Animakt</a><br>
+				<a href="https://rezo.net/">Le portail Rezo.net</a><br>
+				<a href="https://www.monde-diplomatique.fr/">Le diplodocus</a><br>
+				<a href="https://www.vvbb.fr">Vincent Bartissol</a>
+			</p> -->
+
+        <p>
+          Contact :<br /><br />
+          Christophe Perraudeau<br />
+          60 rue Stendhal 75020 Paris<br />
+          06 71 03 37 42<br />
+          <a href="mailto:cietaftaf@laposte.net.fr?subject=Bonjour"
+            >cietaftaf@laposte.net</a
+          >
+        </p>
+      </div>
+
+      <div id="page5_bottom"></div>
+    </section>
+
+    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+      integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <!-- <script src="js/jquery.fancybox.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- <script src="js/lightslider.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script src="js/script1.js"></script>
+  </body>
+</html>
