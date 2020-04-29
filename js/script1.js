@@ -1,24 +1,3 @@
-var elem = document.querySelector("#accueil_middle"),
-  div1 = document.querySelector("#Transform1"),
-  div2 = document.querySelector("#Transform2"),
-  x = 0,
-  // x1 = $('#accueil div:nth-child(2)').offset().left,
-  // y = $('#accueil div:nth-child(2)').css('margin-top').replace('px', '').substring(0,2),
-  y1 = $("#Transform1").offset().top,
-  y2 = $("#Transform2").offset().top;
-
-elem.addEventListener(
-  "mousemove",
-  function (e) {
-    // Now we calculate the difference upwards
-    // div1.style.left = e.clientX/200 + x + 'px';
-    // div1.style.top = e.clientY/200 + y1 + 'px';
-    // div2.style.left = e.clientX/120 + x + 'px';
-    // div2.style.top = e.clientY/120 + y2 + 'px';
-  },
-  true
-);
-
 // ===========================================================
 // See tutorial at :
 // https://css-tricks.com/animate-a-container-on-mouse-over-using-perspective-and-transform/
@@ -200,37 +179,6 @@ window.onclick = function (event) {
 };
 
 $(document).ready(function () {
-  $(".carousel").slick({
-    infinite: true,
-    arrows: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 3,
-    infinite: true,
-    centerMode: true,
-    variableWidth: true,
-  });
-
-  // $('.slider-for').slick({
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   fade: true,
-  //   asNavFor: '.slider-nav'
-  // });
-  // $('.slider-nav').slick({
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   arrows: false,
-  //   asNavFor: '.slider-for',
-  //   // dots: false,
-  //   focusOnSelect: true
-  // });
-
-  $('[data-fancybox="gallery"]').fancybox({
-    buttons: ["close"],
-    loop: true,
-  });
-
   $("#envelope").click(function () {
     $("html, body").animate(
       {
@@ -241,26 +189,33 @@ $(document).ready(function () {
     );
   });
 
-  // $(".portrait_name").css("opacity","0");
-  // $(".portrait_name").slideUp();
-  // $(".portrait_description").css("opacity","0");
+  $('[data-fancybox="gallery"]').fancybox({
+    buttons: ["close"],
+    loop: true,
+  });
 
-  // $("#portrait img").hide();
-  // $(".portrait_name").hide();
-  // $(".portrait_description").hide();
+  $(".carousel").slick({
+    infinite: true,
+    arrows: true,
+    // slidesToShow: 3,
+    // slidesToScroll: 3,
+    infinite: true,
+    centerMode: true,
+    variableWidth: true,
+  });
+
+  //hide to prepare ui animation
   $(".portrait_row *").hide();
   $("#gallerie img").hide();
   $("#contact p, #contact_square_top").hide();
 });
 
 $(document).scroll(function () {
-  var y = $(this).scrollTop();
-  var documentHeight = $(document).height();
-  var topGallerie =
-    ($("#gallerie").offset().top - $("#gallerie").height()) * 1.3;
-  // console.log("topGallerie: "+ topGallerie+"   y: "+y );
-  var topContactDocumentHeight = documentHeight - 1.7 * $(window).height();
-  // console.log("y: "+y+"  vh: "+documentHeight+"  vh1: "+topContactDocumentHeight);
+  let y = $(this).scrollTop();
+  let documentHeight = $(document).height();
+  let topGallerie =
+    ($("#gallerie").offset().top - $("#gallerie").height()) * 1.3; //get the position.y of #gallerie
+  let topContactDocumentHeight = documentHeight - 1.7 * $(window).height(); //get the position.y of #contact
 
   if (y > $(window).height() && y < topContactDocumentHeight) {
     $("#envelope").fadeIn();

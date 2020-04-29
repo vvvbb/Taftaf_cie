@@ -25,9 +25,6 @@
 
     <link rel="icon" type="image/png" href="./img/favicon.png" />
 
-    <!-- <link rel="stylesheet" href="css/w3.css">
-
-	<link rel="stylesheet" href="css/normalize.css"> -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -36,15 +33,11 @@
 
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
-    <!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css"> -->
     <link
       rel="stylesheet"
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
     />
-
-    <!-- <link rel="stylesheet" href="css/lightslider.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"/> -->
 
     <link
       rel="stylesheet"
@@ -139,27 +132,7 @@
             la bise hivernale<br />
             Ça joue à toutes les saisons, mais c'est pas du Vivaldi!<br />
           </p>
-
-          <!-- 	        <div class="carousel">
-			    <ul id="lightSlider">
-			        <li data-thumb="./img/page2_aperoswing1.jpg">
-			            <img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/>
-			        </li>
-			        <li data-thumb="./img/page2_aperoswing2.jpg">
-			            <img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/>
-			        </li>
-			        <li data-thumb="./img/page2_aperoswing3.jpg">
-			            <img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/>
-			        </li>
-			        <li data-thumb="./img/page2_aperoswing4.jpg">
-			            <img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/>
-			        </li>
-			        <li data-thumb="./img/page2_aperoswing5.jpg">
-			            <img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/>
-			        </li>
-			    </ul>
-			</div> -->
-
+          <button type="button" class="slick-prev fas fa-arrow-left"></button>
           <div class="carousel">
             <div>
               <img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1" />
@@ -177,23 +150,7 @@
               <img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5" />
             </div>
           </div>
-
-          <!-- 			<div class="carousel">
-				<div class="slider slider-for" data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "arrows": false, "fade:" true, "asNavFor": .slider-nav }' >
-					<div><img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/></div>
-					<div><img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/></div>
-					<div><img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/></div>
-					<div><img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/></div>
-					<div><img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/></div>
-				</div>
-				<div class="slider slider-nav" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows": false, "focusOnSelect:" true, "asNavFor": .slider-for }' >
-					<div><img src="./img/page2_aperoswing1.jpg" alt="Apero Swing 1"/></div>
-					<div><img src="./img/page2_aperoswing2.jpg" alt="Apero Swing 2"/></div>
-					<div><img src="./img/page2_aperoswing3.jpg" alt="Apero Swing 3"/></div>
-					<div><img src="./img/page2_aperoswing4.jpg" alt="Apero Swing 4"/></div>
-					<div><img src="./img/page2_aperoswing5.jpg" alt="Apero Swing 5"/></div>
-				</div>
-			</div> -->
+          <button type="button" class="slick-next fas fa-arrow-right"></button>
         </div>
       </div>
       <!-- The Modal Le Crépuscule des Hérissons-->
@@ -291,10 +248,8 @@
           <div class="portrait_row portrait_img_float1">
             <img src="./img/page3_portrait3.png" alt="Christophe Perraudeau" />
           </div>
-          <div class="portrait_row">
+          <div class="portrait_row card_name">
             <p class="portrait_name">Christophe Perraudeau</p>
-          </div>
-          <div class="portrait_row">
             <p class="portrait_description">
               Comédien jongleur formé au Samovar et aux arènes de Nanterre, puis
               déformé sur le tas par les rencontres de toutes sortes, les
@@ -314,10 +269,8 @@
           <div class="portrait_row portrait_img_float2">
             <img src="./img/page3_portrait4.png" alt="Josselin Syllard" />
           </div>
-          <div class="portrait_row">
+          <div class="portrait_row card_name">
             <p class="portrait_name">Josselin Syllard</p>
-          </div>
-          <div class="portrait_row">
             <p class="portrait_description">
               Musicien acrobate formé par José Meson et Lucio Nicolodi, puis
               déformé sur le tas par des danseurs, des mimes, des jongleurs, des
@@ -339,7 +292,6 @@
     <section id="gallerie">
       <p class="gallerie_text">Gallerie</p>
       <div class="gallerie_triangle1"></div>
-      <div class="gallerie_triangle2"></div>
 
       <div class="grid">
         <div class="gallerie_border"></div>
@@ -429,7 +381,6 @@
       <div id="page5_bottom"></div>
     </section>
 
-    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
@@ -442,8 +393,10 @@
     <!-- <script src="js/jquery.fancybox.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-    <!-- <script src="js/lightslider.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/a59b4a1a62.js"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
