@@ -63,7 +63,7 @@ iframe {
 }
 
 #envelope {
-  display: none;
+  /* display: none; */
   position: fixed;
   /*color: grey;*/
   /*height: 7%;*/
@@ -569,6 +569,8 @@ iframe {
 /*/////SECTION GALLERIE*/
 #gallerie {
   /* overflow: hidden; */
+  /* height: 100vh; */
+  /* overflow: scroll; */
 }
 
 .gallerie_text {
@@ -580,10 +582,6 @@ iframe {
   z-index: 1;
 }
 
-#gallerie img {
-  /*width: 15vw;*/
-}
-
 .gallerie_triangle1 {
   /* display: none; */
   position: absolute;
@@ -592,6 +590,7 @@ iframe {
   border-top: 70vh solid transparent;
   border-bottom: 30vh solid #d95e2b;
   border-left: 99vw solid #d95e2b;
+  z-index: -1;
 }
 
 .gallerie_border {
@@ -605,42 +604,35 @@ iframe {
   /*background-color: orange;*/
 }
 
-.grid {
-  display: grid;
-  /* background-color: cyan; */
-  height: 100%;
-  width: 100%;
+.gallerie_grid {
+  /* margin: auto 0; */
+  /* height: 100%; */
+  width: 90%;
   margin: auto;
-}
-
-.row {
-  margin: auto;
-  text-align: center;
-  display: flex;
+  /* position: absolute; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); */
+  /* grid-template-rows: repeat(auto-fill, minmax(19%, 1fr)); */
+  /* grid-gap: 1rem; */
+  /* align-items: center; */
+  /* grid-template-columns: repeat(auto-fill, 19%); */
+  /* grid-template-rows: repeat(5, 100px); */
+  /* justify-content: center;
+  justify-self: center;
   align-items: center;
-  flex-wrap: wrap;
-  /*height : 50%;*/
+  align-self: center;
+  vertical-align: middle; */
 }
 
-.column {
-  flex: 20%;
-  max-width: 20%;
-  z-index: 1;
-}
-
-.column img {
-  /* margin-top: 2px; */
-  /* margin-bottom: 6px; */
-  max-width: 100%;
-  width: 98%;
-  border-radius: 2px;
-  /* border: 1px solid cyan; */
+.gallerie_grid img {
+  width: 20%;
+  border-radius: 3px;
   transition: transform 0.4s, filter 0.7s ease-in-out;
   -webkit-transition: transform 0.4s, filter 0.7s ease-in-out;
   transform-origin: center center;
   filter: brightness(100%);
 }
-.column img:hover {
+.gallerie_grid img:hover {
   filter: brightness(150%);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
@@ -648,14 +640,19 @@ iframe {
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   #gallerie {
     /* height: 400vh; */
   }
+  .grid {
+    /* display: none; */
+  }
   .column {
-    flex: 25%;
-    max-width: 25%;
+    /* display: hide; */
+    /* flex: 50%; */
+    /* max-width: 50%; */
   }
   .column img {
     /* width: 30%; */
@@ -676,6 +673,29 @@ iframe {
 }
 
 /*/////SECTION CONTACT*/
+#contact {
+  height: 45vh;
+  /* background-color: cyan; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* justify-content: center; */
+  margin: 0 auto;
+}
+
+#contact p {
+  background-color: #d95e2b;
+  border: 2px solid whitesmoke;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  width: 20%;
+  /* border: 5px dashed olivedrab; */
+  position: absolute;
+  left: 50%;
+  margin-left: -10%;
+  padding: 10px 0;
+}
+
 #contact_square_top {
   position: absolute;
   width: 0;
@@ -683,8 +703,8 @@ iframe {
   border-top: 30vh solid #d95e2b;
   border-bottom: 20vh solid transparent;
   border-left: 30vh solid #d95e2b;
-  /*top: -30%;*/
   z-index: -1;
+  border: 0;
 }
 #contact_square_bottom {
   /*display: none;*/
@@ -695,32 +715,18 @@ iframe {
   border-bottom: 20vh solid #d95e2b;
   border-left: 30vh solid transparent;
   border-right: 30vh solid #d95e2b;
-  /*top: -30%;*/
-  /*left: 50vw;*/
   right: 0;
   bottom: 0;
   z-index: -1;
+  border: 0;
 }
-
-#contact {
-  height: 100vh;
-  padding-bottom: 10%;
-  position: relative;
-  display: grid;
-  text-align: center;
-  align-items: center;
-  justify-items: center;
-}
-
-/*#contact div:nth-child(-n + 2){*/
-/*height: 70%;*/
-/*	margin-top: auto;
-    display: flex;
-  	justify-content: center;
-  	align-items: center;*/
-/*}*/
 
 #page5_bottom {
+  display: none;
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
   background: rgba(204, 51, 51, 1);
   background: -moz-linear-gradient(
     top,
@@ -778,9 +784,4 @@ iframe {
     rgba(153, 0, 51, 1) 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc3333', endColorstr='#990033', GradientType=0 );
-
-  height: 5%;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
 }

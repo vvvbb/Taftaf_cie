@@ -194,6 +194,20 @@ $(document).ready(function () {
     loop: true,
   });
 
+  $(".gallerie_grid").masonry({
+    // options
+    percentPosition: true,
+    itemSelector: ".gallerie_grid img",
+    columnWidth: ".gallerie_grid img",
+    // fitWidth: true,
+    // columnWidth: 20px,
+    // stamp: ".stamp",
+    // fitWidth: true,
+    // originTop: false,
+    // containerStyle: null,
+    horizontalOrder: false,
+  });
+
   $(".carousel").slick({
     infinite: true,
     arrows: true,
@@ -215,22 +229,29 @@ $(document).scroll(function () {
   let documentHeight = $(document).height();
   let topGallerie =
     ($("#gallerie").offset().top - $("#gallerie").height()) * 1.3; //get the position.y of #gallerie
-  let topContactDocumentHeight = documentHeight - 1.7 * $(window).height(); //get the position.y of #contact
+  let topContactDocumentHeight = documentHeight - 1.2 * $(window).height(); //get the position.y of #contact
 
   if (y > $(window).height() && y < topContactDocumentHeight) {
+    $("#envelope").fadeIn();
+  } else if (y == 0) {
     $("#envelope").fadeIn();
   } else {
     $("#envelope").fadeOut();
   }
 
   if (y > topGallerie) {
-    $("#gallerie img").show("scale");
+    // $("#gallerie img").show("scale");
+    $("#gallerie img").each(function (i) {
+      $(this)
+        .delay(i * 100)
+        .show("scale");
+    });
   }
 
   if (y > topContactDocumentHeight) {
     // $('#contact p').show("clip",1000);
     $("#contact p").show("drop", { direction: "up" }, 1000);
-    $("#contact_square_top").show("drop", 1000);
+    // $("#contact_square_top").show("drop", 1000);
     // $('#contact_square_top').fadeIn(1000);
   }
 
