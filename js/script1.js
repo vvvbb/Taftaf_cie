@@ -179,14 +179,13 @@ window.onclick = function (event) {
 };
 
 $(document).ready(function () {
-  $("#envelope").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: $("#contact").offset().top,
-      },
-      1500,
-      "swing"
-    );
+  $(".envelope").click(function () {
+    $(".contact").fadeIn();
+    $(this).fadeOut();
+  });
+  $(".deleteContactClose").click(function () {
+    $(".envelope").fadeIn();
+    $(".contact").fadeOut();
   });
 
   $('[data-fancybox="gallery"]').fancybox({
@@ -203,7 +202,7 @@ $(document).ready(function () {
     // columnWidth: 20px,
     // stamp: ".stamp",
     // fitWidth: true,
-    // originTop: false,
+    originTop: false,
     // containerStyle: null,
     horizontalOrder: false,
   });
@@ -231,12 +230,10 @@ $(document).scroll(function () {
     ($("#gallerie").offset().top - $("#gallerie").height()) * 1.3; //get the position.y of #gallerie
   let topContactDocumentHeight = documentHeight - 1.2 * $(window).height(); //get the position.y of #contact
 
-  if (y > $(window).height() && y < topContactDocumentHeight) {
-    $("#envelope").fadeIn();
-  } else if (y == 0) {
-    $("#envelope").fadeIn();
+  if (y === 0) {
+    $(".envelope").fadeOut();
   } else {
-    $("#envelope").fadeOut();
+    $(".envelope").fadeIn();
   }
 
   if (y > topGallerie) {

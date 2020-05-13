@@ -55,7 +55,21 @@
   </head>
 
   <body>
-    <img src="./img/envelope.png" alt="" id="envelope" />
+    <!-- <img src="./img/envelope.png" alt="" class="envelope" /> -->
+    <i class="far fa-envelope envelope flipCard"></i>
+    <section class="contact flipCard">
+      <span class="deleteContactClose">&times;</span>
+      <p>
+        Contact :<br /><br />
+        Christophe Perraudeau<br />
+        60 rue Stendhal<br />
+        75020 Paris<br /><br />
+        06 71 03 37 42<br /><br />
+        <a href="mailto:cietaftaf@laposte.net.fr?subject=Bonjour"
+          >cietaftaf@laposte.net</a
+        >
+      </p>
+    </section>
 
     <section id="accueil">
       <h1>Taf Taf Cie</h1>
@@ -239,7 +253,6 @@
     <section id="portrait">
       <div id="portrait_rect_left"></div>
       <div id="portrait_rect_right"></div>
-
       <div class="portrait_grid">
         <div class="portrait_col card_cp">
           <!-- <div class="portrait_row portrait_img">
@@ -290,7 +303,7 @@
     </section>
 
     <section id="gallerie">
-      <p class="gallerie_text">Gallerie</p>
+      <!-- <p class="gallerie_text">Gallerie</p> -->
       <div class="gallerie_triangle1"></div>
 
       <div class="gallerie_grid">
@@ -301,7 +314,7 @@
           ><img src="./img/page4_gallerie1.jpg" alt=""
         /></a>
         <a data-fancybox="gallery" href="./img/page4_gallerie2.jpg"
-          ><img src="./img/page4_gallerie2.jpg" alt="" class="test"
+          ><img src="./img/page4_gallerie2.jpg" alt=""
         /></a>
         <a data-fancybox="gallery" href="./img/page4_gallerie3.jpg"
           ><img src="./img/page4_gallerie3.jpg" alt=""
@@ -374,17 +387,10 @@
       <!--end grid-->
     </section>
 
-    <section id="contact">
+    <section style="display: none;">
       <div id="contact_square_top"></div>
       <div id="contact_square_bottom"></div>
       <div>
-        <!-- <p>Sites amis :<br><br>
-				<a href="http://www.animakt.fr/">Animakt</a><br>
-				<a href="https://rezo.net/">Le portail Rezo.net</a><br>
-				<a href="https://www.monde-diplomatique.fr/">Le diplodocus</a><br>
-				<a href="https://www.vvbb.fr">Vincent Bartissol</a>
-			</p> -->
-
         <p>
           Contact :<br /><br />
           Christophe Perraudeau<br />
@@ -395,8 +401,6 @@
           >
         </p>
       </div>
-
-      <div id="page5_bottom"></div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
