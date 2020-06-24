@@ -22,7 +22,9 @@ html {
 }
 
 body {
-  background-color: #cc3333;
+  /* background-color: #cc3333; rgba(204, 51, 51,1) */
+  /* background-color: rgba(204, 51, 51, 0.8); */
+  /* background-color: blue; */
   justify-content: center;
   align-items: center;
   width: inherit;
@@ -95,7 +97,7 @@ iframe {
   border-radius: 10px;
   border: 2px solid #ccc;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 10;
   -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
@@ -112,6 +114,7 @@ iframe {
 
 /*/////SECTION ACCUEIL*/
 #accueil {
+  background-color: rgba(204, 51, 51, 0.99);
   perspective: 50px;
   margin: auto;
   height: 100vh;
@@ -138,17 +141,17 @@ iframe {
   margin-left: -30%;
   width: 40vw;
   padding-top: 26.25%;
-  border: 3px solid black;
+  /* border: 3px solid black;
   background-color: #d95e2b;
   -webkit-box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1);
-  box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1); */
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   background-image: url("../img/page1_accueil2.jpg");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -156,31 +159,32 @@ iframe {
 
 /*#accueil div:nth-child(3){*/
 #PerspectiveandTransform2 {
+  display: block;
   position: absolute;
   margin-top: -15%;
   margin-left: -8%;
   width: 50vw;
   padding-top: 27%;
-  border: 3px solid black;
+  /* border: 3px solid black;
   background-color: #e3482d;
+  -webkit-box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1); */
   -webkit-transform: rotate(-4deg);
   -ms-transform: rotate(-4deg);
   transform: rotate(-4deg);
-  -webkit-box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1);
-  box-shadow: 1px 1px 13px 10px rgba(0, 0, 0, 1);
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   -o-transition: transform 0.7s;
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s;
   background-image: url("../img/page1_accueil1.jpg");
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/*#accueil img:nth-child(4){    TRANSFORM IMG DROITE*/
+/*#accueil img:nth-child(4){ */
 #Transform1 {
   display: block;
   display: none;
@@ -200,7 +204,7 @@ iframe {
   transition: transform 01.5s, -webkit-transform 01.5s;
 }
 
-/*#accueil img:nth-child(5){    TRANSFORM IMG GAUCHE*/
+/*#accueil img:nth-child(5){ */
 #Transform2 {
   display: block;
   display: none;
@@ -220,6 +224,18 @@ iframe {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
+#test3 {
+  background-image: url("../img/page1_accueil2.jpg");
+  position: relative;
+  height: 100px;
+  /* background-image: url(http://wearepeak.co.uk/wp-content/uploads/2016/02/testimonial.jpg); */
+  width: 100%;
+  border-bottom-left-radius: 250% 160px;
+  border-bottom-right-radius: 0;
+  margin-left: -2em;
+  padding-right: 2em;
+}
+
 /*/////SECTION SPECTACLE*/
 .accordion {
   display: flex;
@@ -230,6 +246,8 @@ iframe {
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 71px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+  z-index: 2;
 }
 
 .accordion .card {
@@ -301,7 +319,7 @@ iframe {
   border-bottom: 20vh solid transparent;
   border-left: 30vh solid #d95e2b;
   top: -30%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 #spectacle_square_bottom {
@@ -313,7 +331,7 @@ iframe {
   border-top: 40vh solid transparent;
   border-bottom: 40vh solid transparent;
   border-right: 40vh solid #d95e2b;
-  z-index: -1;
+  z-index: 1;
 }
 
 /* The Modal (background) */
@@ -344,13 +362,6 @@ iframe {
 
 .modal-center {
   text-align: center;
-}
-
-.modal-content * {
-  /*width: 50%;*/
-  /*max-width: 1000px;*/
-  /*margin:auto;*/
-  /*text-align: justify;*/
 }
 
 @media screen and (min-width: 1400px) {
@@ -432,29 +443,36 @@ iframe {
   left: 0;
   height: 320vh;
   width: 5%;
-  z-index: -2;
+  /* z-index: -1; */
 }
 
 #portrait_rect_right {
   position: absolute;
   background-color: #e3482d;
   right: 0;
-  height: 300vh;
+  height: 250vh;
   width: 5%;
-  z-index: -2;
+  /* z-index: -2; */
 }
 
 #portrait {
   margin: auto;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* border: 1px dotted yellowgreen; */
 }
+#portrait {
+  /* position: relative; */
+  background-color: rgba(204, 51, 51, 0.99);
+  /* background-color: blue; */
+  /* z-index: 2; */
+}
 
 #portrait img {
   position: relative;
+  z-index: 2;
   /* left: 20px; */
   margin: auto;
   -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
@@ -479,6 +497,8 @@ iframe {
 }
 
 .portrait_grid {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -517,13 +537,17 @@ iframe {
   text-align: right;
 }
 .card_name {
-  background-color: #d95e2b;
+  /* background-color: #d95e2b; */
+  background-color: white;
+  /* height: 200%; */
+  /* margin-bottom: 50%; */
   border: 2px solid whitesmoke;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   padding: 10px;
-  top: -5%;
-  z-index: -1;
+  /* margin-top: 1000px; */
+  margin-top: -5%;
+  /* z-index: -1; */
 }
 .portrait_description_cie {
   display: none;
@@ -582,7 +606,10 @@ iframe {
 
 /*/////SECTION GALLERIE*/
 #gallerie {
-  position: relative;
+  /* position: relative; */
+  /* position: relative; */
+  /* z-index: -1; */
+  background-color: rgba(204, 51, 51, 0.99);
 }
 
 .gallerie_text {
@@ -611,8 +638,6 @@ iframe {
   overflow: hidden;
   margin: auto;
   /* border: 1px solid seagreen; */
-  /* position: absolute; */
-  /* z-index: -1; */
 }
 
 .gallerie_grid img {
@@ -634,20 +659,6 @@ iframe {
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  #gallerie {
-    /* height: 400vh; */
-  }
-  .grid {
-    /* display: none; */
-  }
-  .column {
-    /* display: hide; */
-    /* flex: 50%; */
-    /* max-width: 50%; */
-  }
-  .column img {
-    /* width: 30%; */
-  }
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -693,16 +704,15 @@ iframe {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* position: absolute; */
-  /* position: relative; */
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
-  color: goldenrod;
+  color: whitesmoke;
+  position: relative;
+  z-index: 1;
 }
 
 #tour * {
   text-align: center;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "ProximaNova", "Roboto", sans-serif;
   font-size: 1.4rem;
 }

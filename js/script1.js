@@ -179,6 +179,30 @@ $(document).ready(function () {
     $(".contact").fadeOut();
   });
 
+  // $(".contact").click(function (event) {
+  //   event.stopPropagation();
+  //   console.log("POP");
+  // });
+
+  // $(document).click(function (e) {
+  //   const container = $(".contact");
+  //   // if the target of the click isn't the container nor a descendant of the container
+  //   if (!container.is(e.target) && container.has(e.target).length === 0) {
+  //     container.hide();
+  //     console.log("POP");
+  //   }
+  // });
+
+  $(document).click(function (e) {
+    if ($(e.target).closest(".contact").length === 0) {
+      if ($(".envelope").is(":hidden")) {
+        // console.log("POPO" + $.now());
+        $(".envelope").fadeIn();
+        $(".contact").fadeOut();
+      }
+    }
+  });
+
   //////CAROUSEL INSIDE MODAL APERO SWING
   $(".carousel").slick({
     infinite: true,
@@ -202,15 +226,16 @@ $(document).ready(function () {
     // containerStyle: null,
     horizontalOrder: false,
   });
+  $(".gallerie_grid").masonry();
 
   $('[data-fancybox="gallery"]').fancybox({
     buttons: ["close"],
     loop: true,
   });
 
-  //hide to prepare ui animation
+  //HIDE TO PREPARE UI ANIMATION
   $(".portrait_row *").hide();
-  $("#gallerie img").hide();
+  // $("#gallerie img").hide();
   $("#contact p, #contact_square_top").hide();
 });
 
@@ -258,13 +283,24 @@ $(document).scroll(function () {
     $(".gallerie_grid").css({
       position: "relative",
       top: "0px",
-      zIndex: "0",
+      // zIndex: "0",
     });
   } else {
     $(".gallerie_grid").css({
       position: "sticky",
       top: gallerieOffsetTop + "px",
-      zIndex: "-1",
+      // zIndex: "1",
     });
+  }
+
+  //CREATE MY OWN PARALLAX EFFECT ON card_cp
+  let portraitLimitMax = $(".card_cp").offset().top + $(".card_cp").height();
+  let portraitLimitMin = $("#portrait").offset().top - $("#portrait").height();
+  let portraitParallaxEffect = y - $(".card_cp").offset().top;
+
+  if (y > portraitLimitMin && y < portraitLimitMax) {
+    $(".card_cp, .card_js").css("position", "relative");
+    $(".card_cp").css("bottom", portraitParallaxEffect / 4 + "px");
+    $(".card_js").css("bottom", portraitParallaxEffect / 8 + "px");
   }
 });
