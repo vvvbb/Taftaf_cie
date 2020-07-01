@@ -1,0 +1,63 @@
+/*/////SECTION GALLERIE*/
+#gallerie {
+  /* position: relative; */
+  /* z-index: -1; */
+  background-color: $primary-color;
+}
+
+.gallerie_text {
+  position: absolute;
+  font-family: "Courier New";
+  color: #e3482d;
+  left: 50%;
+  font-size: 1em;
+  z-index: 1;
+}
+
+.gallerie_triangle1 {
+  display: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 70vh solid transparent;
+  border-bottom: 30vh solid $secondary-color;
+  border-left: 99vw solid $secondary-color;
+  z-index: -1;
+}
+
+.gallerie_grid {
+  /* margin: auto 0; */
+  /* height: 100%; */
+  overflow: hidden;
+  margin: auto;
+  /* border: 1px solid seagreen; */
+}
+
+.gallerie_grid img {
+  width: 20%;
+  border-radius: 3px;
+  transition: transform 0.4s, filter 0.7s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(100%);
+}
+.gallerie_grid img:hover {
+  filter: brightness(150%);
+  transform: scale(1.1);
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  /* #gallerie {
+      height: 600vh;
+    }
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img {
+      width: 95%;
+    } */
+}

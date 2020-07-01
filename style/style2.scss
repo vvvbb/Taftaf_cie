@@ -1,0 +1,114 @@
+/*SCSS started on 29/06/2020*/
+@import "./varmixin";
+@import "./accueil";
+@import "./spectacle";
+@import "./portrait";
+@import "./gallerie";
+@import "./contact";
+
+@import url(//db.onlinewebfonts.com/c/6fcade7abbedc0b15b45d46f0b8eca84?family=CoquetteW00-Light);
+@font-face {
+  font-family: "CoquetteW00-Light";
+  src: url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.eot");
+  src: url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.svg#CoquetteW00-Light")
+      format("svg");
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  width: inherit;
+  min-height: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "ProximaNova", "Roboto", sans-serif;
+}
+a {
+  color: #0000ee;
+}
+a:hover {
+  color: #0000ba;
+}
+img {
+  max-width: 100%;
+}
+h1 {
+  font-family: "CoquetteW00-Light", cursive, Monospace, sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 10vh;
+  text-align: center;
+  margin: 0px;
+}
+iframe {
+  border: 0;
+}
+
+.envelope {
+  display: none;
+  font-size: 3rem;
+  padding: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  /* box-sizing: border-box; */
+}
+
+.contact {
+  display: none;
+  min-width: 250px;
+  min-height: 250px;
+  width: 13%;
+  height: 30%;
+  text-align: center;
+}
+
+.contact p {
+  width: 100%;
+  height: 100%;
+  top: 20%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipCard {
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  margin: 1%;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background-color: #ffffff;
+  z-index: 10;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.75);
+}
+
+.deleteContactClose {
+  font-size: 2.5em;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  padding: 10px;
+}

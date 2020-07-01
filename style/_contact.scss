@@ -1,0 +1,47 @@
+/*/////SECTION CONTACT*/
+#contact_square_top {
+  /* display: none; */
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 30vh solid $secondary-color;
+  border-bottom: 20vh solid transparent;
+  border-left: 30vh solid $secondary-color;
+  z-index: -1;
+  border: 0;
+}
+#contact_square_bottom {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10vh solid transparent;
+  border-bottom: 10vh solid $secondary-color;
+  border-left: 10vh solid transparent;
+  border-right: 20vh solid $secondary-color;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#tour {
+  @include flexCenter();
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: whitesmoke;
+  position: relative;
+  z-index: 1;
+}
+
+#tour * {
+  text-align: center;
+  font-family: "ProximaNova", "Roboto", sans-serif;
+  // font-family: "Amatic SC", cursive;
+  font-size: 1.2rem;
+}
+
+#tour h3 {
+  font-family: "Amatic SC", cursive;
+  font-size: 4rem;
+  // line-height: 0.5em;
+}
