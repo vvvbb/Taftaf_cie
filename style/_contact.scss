@@ -45,3 +45,31 @@
   font-size: 4rem;
   // line-height: 0.5em;
 }
+
+#tour img{
+  
+  // border: 5px dashed turquoise;
+  position: absolute;
+  max-height: 250px;
+  width: 100%;
+  bottom: 0;
+  
+  -webkit-filter: drop-shadow(2px 2px 2px black)
+                drop-shadow(-2px 2px 2px black)
+                drop-shadow(2px -2px 2px black)
+                drop-shadow(-2px -2px 2px black);
+
+filter: drop-shadow(2px 2px 2px black)
+        drop-shadow(-2px 2px 2px black)
+        drop-shadow(2px -2px 2px black)
+        drop-shadow(-2px -2px 2px black);
+}
+
+
+#tour img:nth-child(5){
+  border: 1px dotted blue;
+}
+
+#tour img:nth-child(12){
+  // border: 5px double darkmagenta;
+}

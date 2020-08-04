@@ -641,6 +641,19 @@
   font-size: 4rem;
 }
 
+#tour img {
+  position: absolute;
+  max-height: 250px;
+  width: 100%;
+  bottom: 0;
+  -webkit-filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black) drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+  filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black) drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+}
+
+#tour img:nth-child(5) {
+  border: 1px dotted blue;
+}
+
 @font-face {
   font-family: "CoquetteW00-Light";
   src: url("//db.onlinewebfonts.com/t/6fcade7abbedc0b15b45d46f0b8eca84.eot");
