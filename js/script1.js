@@ -237,7 +237,29 @@ $(document).ready(function () {
   $(".portrait_row *").hide();
   // $("#gallerie img").hide();
   $("#contact p, #contact_square_top").hide();
+
+  hedgehogReset();
+  // topInc();
 });
+
+function hedgehogReset() {
+  //HANDLE HEDGEHOG TO CROSS THE STREET
+  $("#hedgehog").animate({ right: 70 + "%" }, 0, hedgehogMove);
+}
+// var Posy = true;
+
+function hedgehogMove() {
+  Posy = Math.floor(Math.random() * 100);
+  $("#hedgehog")
+    .delay(5000)
+    .animate(
+      { right: -110 + "%", top: Posy + "%" },
+      15000,
+      "linear",
+      hedgehogReset
+    );
+  console.log("Posy : " + Posy);
+}
 
 $(document).scroll(function () {
   let y = $(this).scrollTop();
@@ -271,6 +293,17 @@ $(document).scroll(function () {
     $(".portrait_row *").show("slide", { direction: "up" }, 1000);
   }
 
+  //CREATE MY OWN PARALLAX EFFECT ON card_cp
+  let portraitLimitMax = $(".card_cp").offset().top + $(".card_cp").height();
+  let portraitLimitMin = $("#portrait").offset().top - $("#portrait").height();
+  let portraitParallaxEffect = y - $(".card_cp").offset().top;
+
+  if (y > portraitLimitMin && y < portraitLimitMax) {
+    $(".card_cp, .card_js").css("position", "relative");
+    $(".card_cp").css("bottom", portraitParallaxEffect / 4 + "px");
+    $(".card_js").css("bottom", portraitParallaxEffect / 8 + "px");
+  }
+
   //HANDLE TOUR DIV OVER GALLERIE GRID
   let gallerieOffsetBottom =
     $("#gallerie").offset().top +
@@ -293,14 +326,36 @@ $(document).scroll(function () {
     });
   }
 
-  //CREATE MY OWN PARALLAX EFFECT ON card_cp
-  let portraitLimitMax = $(".card_cp").offset().top + $(".card_cp").height();
-  let portraitLimitMin = $("#portrait").offset().top - $("#portrait").height();
-  let portraitParallaxEffect = y - $(".card_cp").offset().top;
+  console.log("y : " + y);
+  // let documentHeight = $(document).height();
+  console.log("documentHeight : " + documentHeight);
+  let windowHeight = $(window).height();
+  console.log("windowHeight : " + windowHeight);
 
-  if (y > portraitLimitMin && y < portraitLimitMax) {
-    $(".card_cp, .card_js").css("position", "relative");
-    $(".card_cp").css("bottom", portraitParallaxEffect / 4 + "px");
-    $(".card_js").css("bottom", portraitParallaxEffect / 8 + "px");
+  ///HANDLE LEAF ANIMATION
+  let triggerLeafAnimation = $(document).height() - $(window).height();
+  let triggerLeafAnimationCanceled =
+    $(document).height() - $(window).height() * 1.5;
+  if (y >= triggerLeafAnimation - 100) {
+    // console.log("TOP1234");
+    $("#tour img:nth-child(5)").addClass("animateLeafPosition85");
+    $("#tour img:nth-child(6)").addClass("animateLeafPosition86");
+    $("#tour img:nth-child(7)").addClass("animateLeafPosition82");
+    $("#tour img:nth-child(8)").addClass("animateLeafPosition81");
+    $("#tour img:nth-child(9)").addClass("animateLeafPosition85");
+    $("#tour img:nth-child(10)").addClass("animateLeafPosition84");
+    $("#tour img:nth-child(11)").addClass("animateLeafPosition85");
+    $("#tour img:nth-child(12)").addClass("animateLeafPosition83");
+  }
+  if (y <= triggerLeafAnimationCanceled) {
+    // console.log("TOP00000000");
+    $("#tour img:nth-child(5)").removeClass("animateLeafPosition85");
+    $("#tour img:nth-child(6)").removeClass("animateLeafPosition86");
+    $("#tour img:nth-child(7)").removeClass("animateLeafPosition82");
+    $("#tour img:nth-child(8)").removeClass("animateLeafPosition81");
+    $("#tour img:nth-child(9)").removeClass("animateLeafPosition85");
+    $("#tour img:nth-child(10)").removeClass("animateLeafPosition84");
+    $("#tour img:nth-child(11)").removeClass("animateLeafPosition85");
+    $("#tour img:nth-child(12)").removeClass("animateLeafPosition83");
   }
 });

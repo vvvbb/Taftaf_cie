@@ -31,6 +31,7 @@
   color: whitesmoke;
   position: relative;
   z-index: 1;
+  overflow: hidden; //allow img to get out screen
 }
 
 #tour * {
@@ -46,30 +47,168 @@
   // line-height: 0.5em;
 }
 
-#tour img{
-  
-  // border: 5px dashed turquoise;
+///////ANIMATION LEAF CONFIG
+
+#tour img {
   position: absolute;
-  max-height: 250px;
-  width: 100%;
-  bottom: 0;
-  
-  -webkit-filter: drop-shadow(2px 2px 2px black)
-                drop-shadow(-2px 2px 2px black)
-                drop-shadow(2px -2px 2px black)
-                drop-shadow(-2px -2px 2px black);
+  // max-height: 150px;
+  // max-width: 50%;
+  bottom: 0px;
 
-filter: drop-shadow(2px 2px 2px black)
-        drop-shadow(-2px 2px 2px black)
-        drop-shadow(2px -2px 2px black)
-        drop-shadow(-2px -2px 2px black);
+  -webkit-filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
+    drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+
+  filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
+    drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  top: 100vh;
 }
 
-
-#tour img:nth-child(5){
-  border: 1px dotted blue;
+.animateLeafPosition81 {
+  animation-name: animateLeaf81;
+  @keyframes animateLeaf81 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 81vh;
+    }
+  }
 }
 
-#tour img:nth-child(12){
-  // border: 5px double darkmagenta;
+.animateLeafPosition82 {
+  animation-name: animateLeaf82;
+  @keyframes animateLeaf82 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 82vh;
+    }
+  }
+}
+
+.animateLeafPosition83 {
+  animation-name: animateLeaf83;
+  @keyframes animateLeaf83 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 83vh;
+    }
+  }
+}
+
+.animateLeafPosition84 {
+  animation-name: animateLeaf84;
+  @keyframes animateLeaf84 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 84vh;
+    }
+  }
+}
+
+.animateLeafPosition85 {
+  animation-name: animateLeaf85;
+  @keyframes animateLeaf85 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 85vh;
+    }
+  }
+}
+
+.animateLeafPosition86 {
+  animation-name: animateLeaf86;
+  @keyframes animateLeaf86 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 86vh;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .animateLeafPosition81 {
+    animation-name: animateLeaf81;
+    @keyframes animateLeaf81 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
+
+  .animateLeafPosition82 {
+    animation-name: animateLeaf82;
+    @keyframes animateLeaf82 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
+
+  .animateLeafPosition83 {
+    animation-name: animateLeaf83;
+    @keyframes animateLeaf83 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
+
+  .animateLeafPosition84 {
+    animation-name: animateLeaf84;
+    @keyframes animateLeaf84 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
+
+  .animateLeafPosition85 {
+    animation-name: animateLeaf85;
+    @keyframes animateLeaf85 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
+
+  .animateLeafPosition86 {
+    animation-name: animateLeaf86;
+    @keyframes animateLeaf86 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 69vh;
+      }
+    }
+  }
 }

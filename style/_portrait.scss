@@ -1,4 +1,5 @@
 /*/////SECTION PORTRAIT*/
+
 #portrait_rect_left {
   position: absolute;
   background-color: $secondary-color;
@@ -25,7 +26,7 @@
 
 #portrait img {
   position: relative;
-  z-index: 2;
+  // z-index: 2;
   /* left: 20px; */
   margin: auto;
   -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
@@ -153,4 +154,24 @@
   #portrait_rect_left {
     height: 220vh;
   }
+}
+
+.hidden {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  // z-index: -1;
+}
+#hedgehog {
+  // border: 10px ridge palegreen;
+  position: absolute;
+  // z-index: -10;
+  // border: none;
+  max-width: 100px;
+  width: 100%;
+  // height: auto;
+  // top: 50%;
+  // left: 100px;
+  // right: 50%;
 }
