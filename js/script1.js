@@ -239,47 +239,93 @@ $(document).ready(function () {
   $("#contact p, #contact_square_top").hide();
 
   //HANDLE HEDGEHOG TO CROSS THE STREET
-  hedgehogReset();
+  // hedgehogReset();
+  hedgehogMove();
 });
 
+let test0 = 0;
 function hedgehogReset() {
   $("#hedgehog").animate({ right: 30 + "%" }, 0, hedgehogMove);
 }
 
 function hedgehogMove() {
+  let timeToCross = 5000; //5000
 
-  let timeToCross=5000;
-    
-  // PosY[0] = Math.floor(Math.random() * 100 );
-  for (let x =1;x<-100;x--){
-    PosY[x]=PosY[x-1]+ Math.floor(Math.random() * Math.floor(max));
-    // PosX[x] = Math.floor(Math.random() * 100 );
+  // PosY[x] = PosY[x - 1] + Math.floor(Math.random() * Math.floor(max));
+
+  Posy1 = Math.floor(Math.random() * 100);
+  Posy3 = Posy1 + Math.floor(Math.random() * (30 - -30)) + -30;
+
+  // $("#hedgehog")
+  //   .delay(50)
+  //   .animate({ right: -30 + "%", top: Posy1 + "%" }, timeToCross * 2, "linear")
+  //   .animate({ right: -60 + "%", top: Posy3 + "%" }, timeToCross, "linear")
+  //   .animate({ right: -90 + "%", top: Posy1 + "%" }, timeToCross, "linear")
+  //   .animate(
+  //     { right: -120 + "%", top: Posy3 + "%" },
+  //     timeToCross,
+  //     "linear",
+  //     hedgehogReset
+  //   );
+
+  // for (let i =30; i>-120;i--){
+  //   $("#hedgehog")
+  //   .delay(1)
+  //   .animate({ right: i + "%" }, 0 , "linear", hedgehogMove)
+
+  // }
+  // test0 = test0 - 500;
+  // if (test0 >= -120) {
+  //   test0--;
+  //   console.log("test0 : " + test0);
+  // }
+  for (var test000 = 30; test000 > -120; test000 -= 10) {
+    console.log("test000 : " + test000);
+    // $("#hedgehog")
+    //   .delay(50)
+    //   .animate({ right: test000 + "%" }, timeToCross, "linear", hedgehogMove);
   }
 
-  Posy1 = Math.floor(Math.random() * 100 );
-  Posy3 = Posy1 + Math.floor(Math.random() * (30 - (-30))) + (-30);
-
   $("#hedgehog")
-    .delay(5000)
+    .delay(50)
     .animate(
-      { right: -30 + "%", top: Posy1 + "%" },
-      timeToCross*2,
-      "linear",
-    ) .animate(
-      { right: -60 + "%", top: Posy3 + "%" },
+      { right: 30 + "%", top: Math.floor(Math.random() * (1000 - -30)) + -30 },
+      0
+    )
+    // .animate({ right: -90 + "%", top: Posy1 + "%" }, timeToCross, "linear")
+    .animate(
+      {
+        right: "-=30" + "%",
+        top: Math.floor(Math.random() * (1000 - -30)) + -30,
+      },
+      timeToCross,
+      "linear"
+    )
+    .animate(
+      {
+        right: "-=60" + "%",
+        top: Math.floor(Math.random() * (1000 - -30)) + -30,
+      },
+      timeToCross,
+      "linear"
+    )
+    .animate(
+      {
+        right: "-=90" + "%",
+        top: Math.floor(Math.random() * (1000 - -30)) + -30,
+      },
+      timeToCross,
+      "linear"
+    )
+    .animate(
+      {
+        right: "-=120" + "%",
+        top: Math.floor(Math.random() * (1000 - -30)) + -30,
+      },
       timeToCross,
       "linear",
-    ) .animate(
-      { right: -90 + "%", top: Posy1 + "%" },
-      timeToCross,
-      "linear",
-    ).animate(
-      { right: -120 + "%", top: Posy3 + "%" },
-      timeToCross,
-      "linear",
-      hedgehogReset
+      hedgehogMove
     );
-  // console.log("Posy : " + Posy1);
 }
 
 $(document).scroll(function () {
@@ -349,9 +395,9 @@ $(document).scroll(function () {
 
   console.log("y : " + y);
   // let documentHeight = $(document).height();
-  console.log("documentHeight : " + documentHeight);
+  // console.log("documentHeight : " + documentHeight);
   let windowHeight = $(window).height();
-  console.log("windowHeight : " + windowHeight);
+  // console.log("windowHeight : " + windowHeight);
 
   ///HANDLE LEAF ANIMATION
   let triggerLeafAnimation = $(document).height() - $(window).height();
