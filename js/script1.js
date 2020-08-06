@@ -238,27 +238,48 @@ $(document).ready(function () {
   // $("#gallerie img").hide();
   $("#contact p, #contact_square_top").hide();
 
+  //HANDLE HEDGEHOG TO CROSS THE STREET
   hedgehogReset();
-  // topInc();
 });
 
 function hedgehogReset() {
-  //HANDLE HEDGEHOG TO CROSS THE STREET
-  $("#hedgehog").animate({ right: 70 + "%" }, 0, hedgehogMove);
+  $("#hedgehog").animate({ right: 30 + "%" }, 0, hedgehogMove);
 }
-// var Posy = true;
 
 function hedgehogMove() {
-  Posy = Math.floor(Math.random() * 100);
+
+  let timeToCross=5000;
+    
+  // PosY[0] = Math.floor(Math.random() * 100 );
+  for (let x =1;x<-100;x--){
+    PosY[x]=PosY[x-1]+ Math.floor(Math.random() * Math.floor(max));
+    // PosX[x] = Math.floor(Math.random() * 100 );
+  }
+
+  Posy1 = Math.floor(Math.random() * 100 );
+  Posy3 = Posy1 + Math.floor(Math.random() * (30 - (-30))) + (-30);
+
   $("#hedgehog")
     .delay(5000)
     .animate(
-      { right: -110 + "%", top: Posy + "%" },
-      15000,
+      { right: -30 + "%", top: Posy1 + "%" },
+      timeToCross*2,
+      "linear",
+    ) .animate(
+      { right: -60 + "%", top: Posy3 + "%" },
+      timeToCross,
+      "linear",
+    ) .animate(
+      { right: -90 + "%", top: Posy1 + "%" },
+      timeToCross,
+      "linear",
+    ).animate(
+      { right: -120 + "%", top: Posy3 + "%" },
+      timeToCross,
       "linear",
       hedgehogReset
     );
-  console.log("Posy : " + Posy);
+  // console.log("Posy : " + Posy1);
 }
 
 $(document).scroll(function () {
