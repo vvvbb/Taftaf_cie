@@ -656,9 +656,7 @@
 
 #tour img {
   position: absolute;
-  bottom: 0px;
-  -webkit-filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black) drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
-  filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black) drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+  bottom: 50px;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: ease-in-out;

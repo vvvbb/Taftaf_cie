@@ -53,13 +53,13 @@
   position: absolute;
   // max-height: 150px;
   // max-width: 50%;
-  bottom: 0px;
+  bottom: 50px;
 
-  -webkit-filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
-    drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+  // -webkit-filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
+  //   drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
 
-  filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
-    drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
+  // filter: drop-shadow(2px 2px 2px black) drop-shadow(-2px 2px 2px black)
+  //   drop-shadow(2px -2px 2px black) drop-shadow(-2px -2px 2px black);
 
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
