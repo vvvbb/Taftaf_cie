@@ -239,52 +239,33 @@ $(document).ready(function () {
   $("#contact p, #contact_square_top").hide();
 
   //HANDLE HEDGEHOG TO CROSS THE STREET
-  hedgehogMove();
-  // hedgehogMove2();
+  // hedgehogMove();
+  hedgehogMove2();
 });
 
-function hedgehogMove() {
-  let timeToCross = 5000; //5000
-
-  $("#hedgehog")
-    .delay(50)
-    .animate(
-      { right: 30 + "%", top: Math.floor(Math.random() * (1000 - -30)) + -30 },
-      0
-    )
-    .animate(
-      {
-        right: "-=30" + "%",
-        top: Math.floor(Math.random() * (1000 - -30)) + -30,
-      },
-      timeToCross,
-      "linear"
-    )
-    .animate(
-      {
-        right: "-=60" + "%",
-        top: Math.floor(Math.random() * (1000 - -30)) + -30,
-      },
-      timeToCross,
-      "linear"
-    )
-    .animate(
-      {
-        right: "-=90" + "%",
-        top: Math.floor(Math.random() * (1000 - -30)) + -30,
-      },
-      timeToCross,
-      "linear"
-    )
-    .animate(
-      {
-        right: "-=120" + "%",
-        top: Math.floor(Math.random() * (1000 - -30)) + -30,
-      },
-      timeToCross,
-      "linear",
-      hedgehogMove
-    );
+function hedgehogMove2() {
+  const hedgehog = document.getElementById("hedgehog");
+  let posX = 0;
+  let posY = $(window).height() / 2;
+  let offsetY = 0;
+  setInterval(frame, 4);
+  function frame() {
+    if (posX >= $(document).width()) {
+      // clearInterval(id);
+      posX = 0 - hedgehog.width - Math.floor(Math.random() * 2500); //5000
+      offsetY = Math.floor(
+        Math.random() *
+          ($(window).height() * 0.8 - $(window).height() * 0.0 + 1) +
+          $(window).height() * 0.0
+      );
+      // console.log("offsetY : " + offsetY);
+    } else {
+      posX++;
+      posY = Math.sin(posX / 500) * 120 + offsetY;
+      hedgehog.style.top = posY + "px";
+      hedgehog.style.left = posX + "px";
+    }
+  }
 }
 
 $(document).scroll(function () {
