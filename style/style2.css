@@ -522,22 +522,33 @@
 #hedgehog {
   position: absolute;
   width: 100%;
-  max-width: 100px;
+  top: 50%;
+}
+
+@media screen and (min-width: 900px) {
+  #hedgehog {
+    width: 100px;
+  }
 }
 
 #cloud1 {
   position: absolute;
-  max-width: 100px;
   width: 100%;
-  top: 30%;
+  top: 10%;
   -webkit-animation-name: cloudMove;
           animation-name: cloudMove;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: cubic-bezier(0.79, 0.8, 0.31, 0.31);
-          animation-timing-function: cubic-bezier(0.79, 0.8, 0.31, 0.31);
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@media screen and (min-width: 900px) {
+  #cloud1 {
+    max-width: 300px;
+  }
 }
 
 @-webkit-keyframes cloudMove {
@@ -546,12 +557,12 @@
             transform: translate3d(100vw, 0px, 0px);
   }
   50% {
-    -webkit-transform: translate3d(40vh, 10px, 0px);
-            transform: translate3d(40vh, 10px, 0px);
+    -webkit-transform: translate3d(40vw, 9vh, 0px);
+            transform: translate3d(40vw, 9vh, 0px);
   }
   100% {
-    -webkit-transform: translate3d(-20vw, 0px, 0px);
-            transform: translate3d(-20vw, 0px, 0px);
+    -webkit-transform: translate3d(-20vw, 4px, 0px);
+            transform: translate3d(-20vw, 4px, 0px);
   }
 }
 
@@ -561,12 +572,12 @@
             transform: translate3d(100vw, 0px, 0px);
   }
   50% {
-    -webkit-transform: translate3d(40vh, 10px, 0px);
-            transform: translate3d(40vh, 10px, 0px);
+    -webkit-transform: translate3d(40vw, 9vh, 0px);
+            transform: translate3d(40vw, 9vh, 0px);
   }
   100% {
-    -webkit-transform: translate3d(-20vw, 0px, 0px);
-            transform: translate3d(-20vw, 0px, 0px);
+    -webkit-transform: translate3d(-20vw, 4px, 0px);
+            transform: translate3d(-20vw, 4px, 0px);
   }
 }
 

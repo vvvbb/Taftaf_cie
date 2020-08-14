@@ -239,7 +239,6 @@ $(document).ready(function () {
   $("#contact p, #contact_square_top").hide();
 
   //HANDLE HEDGEHOG TO CROSS THE STREET
-  // hedgehogMove();
   hedgehogMove2();
 });
 
@@ -247,12 +246,12 @@ function hedgehogMove2() {
   const hedgehog = document.getElementById("hedgehog");
   let posX = 0;
   let posY = $(window).height() / 2;
-  let offsetY = 0;
+  let offsetY = $(window).height() / 2; //valeur initiale mais qui change a chaque passage
   setInterval(frame, 4);
   function frame() {
     if (posX >= $(document).width()) {
       // clearInterval(id);
-      posX = 0 - hedgehog.width - Math.floor(Math.random() * 2500); //5000
+      posX = 0 - hedgehog.width - Math.floor(Math.random() * 100); //5000
       offsetY = Math.floor(
         Math.random() *
           ($(window).height() * 0.8 - $(window).height() * 0.0 + 1) +

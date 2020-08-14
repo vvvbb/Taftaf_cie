@@ -164,23 +164,24 @@
   // z-index: -1;
 }
 #hedgehog {
-  // border: 10px ridge palegreen;
   position: absolute;
-  // z-index: -10;
-  // border: none;
   width: 100%;
-  max-width: 100px;
+  // max-width: 100%;
   // height: auto;
-  // top: 50%;
-  // left: 100px;
-  // right: 50%;
+  top: 50%;
+}
+@media screen and (min-width: 900px) {
+  #hedgehog {
+    // border: 10px ridge palegreen;
+    width: 100px;
+  }
 }
 
 #cloud1 {
   position: absolute;
-  max-width: 100px;
+
   width: 100%;
-  top: 30%;
+  top: 10%;
   // right: -30%;
   // right: 0%;
   animation-name: cloudMove;
@@ -188,7 +189,15 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
   // animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-  animation-timing-function: cubic-bezier(0.79, 0.8, 0.31, 0.31);
+  // animation-timing-function: cubic-bezier(0.79, 0.8, 0.31, 0.31);
+  animation-timing-function: linear;
+}
+@media screen and (min-width: 900px) {
+  #cloud1 {
+    // border: 10px ridge palegreen;
+    max-width: 300px;
+    // width: 100px;
+  }
 }
 
 @keyframes cloudMove {
@@ -212,10 +221,10 @@
     // animation-timing-function: ease-in;
   }
   50% {
-    transform: translate3d(40vh, 10px, 0px);
+    transform: translate3d(40vw, 9vh, 0px);
     // animation-timing-function: ease-out;
   }
   100% {
-    transform: translate3d(-20vw, 0px, 0px);
+    transform: translate3d(-20vw, 4px, 0px);
   }
 }
