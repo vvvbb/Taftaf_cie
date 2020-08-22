@@ -22,6 +22,12 @@
       format("svg");
 }
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 html {
   width: 100%;
   min-height: 100%;
@@ -30,7 +36,7 @@ html {
 body {
   justify-content: center;
   align-items: center;
-  width: inherit;
+  width: 100%;
   min-height: inherit;
   margin: 0px;
   padding: 0px;
@@ -66,30 +72,30 @@ iframe {
 }
 
 .envelope {
-  display: none;
+  display: none; //!!! NOT WORKING
   font-size: 3rem;
   padding: 10px;
   cursor: pointer;
   opacity: 0.8;
-  /* box-sizing: border-box; */
 }
 
 .contact {
+  position: relative;
   display: none;
   min-width: 250px;
   min-height: 250px;
   width: 13%;
   height: 30%;
   text-align: center;
-}
 
-.contact p {
-  width: 100%;
-  height: 100%;
-  top: 20%;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
+  p {
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .flipCard {

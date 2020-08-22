@@ -32,19 +32,21 @@
   position: relative;
   z-index: 1;
   overflow: hidden; //allow img to get out screen
-}
 
-#tour * {
-  text-align: center;
-  font-family: "ProximaNova", "Roboto", sans-serif;
-  // font-family: "Amatic SC", cursive;
-  font-size: 1.2rem;
-}
+  h3 {
+    font-family: "Amatic SC", cursive;
+    font-size: 4rem;
+    // line-height: 0.5em;
+    margin-bottom: 1rem;
+  }
 
-#tour h3 {
-  font-family: "Amatic SC", cursive;
-  font-size: 4rem;
-  // line-height: 0.5em;
+  p {
+    text-align: center;
+    font-family: "ProximaNova", "Roboto", sans-serif;
+    // font-family: "Amatic SC", cursive;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 ///////ANIMATION LEAF CONFIG

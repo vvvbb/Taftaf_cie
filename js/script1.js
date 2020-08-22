@@ -11,123 +11,86 @@ function handleCloseModal(element) {
   $("body").css("overflow", "visible");
 }
 
-$(document).ready(function () {
+$("#container1").mousemove(function () {
+  animateContainer(container1, inner1);
+});
+$("#container2").mousemove(function () {
+  animateContainer(container2, inner2);
+});
+
+function animateContainer(container, inner) {
   // ===========================================================
   // See tutorial at :
   // https://css-tricks.com/animate-a-container-on-mouse-over-using-perspective-and-transform/
   // ===========================================================
 
-  (function () {
-    // Init
-    var container = document.getElementById("accueil"),
-      inner1 = document.getElementById("PerspectiveandTransform1"),
-      inner2 = document.getElementById("PerspectiveandTransform2"),
-      inner3 = document.getElementById("Transform1"),
-      inner4 = document.getElementById("Transform2");
+  // console.log("container : " + container);
+  // console.log("inner : " + inner);
 
-    // Mouse
-    var mouse = {
-      _x: 0,
-      _y: 0,
-      x: 0,
-      y: 0,
-      updatePosition: function (event) {
-        var e = event || window.event;
-        this.x = e.clientX - this._x;
-        this.y = (e.clientY - this._y) * -1;
-      },
-      setOrigin: function (e) {
-        this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
-        this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
-      },
-      show: function () {
-        return "(" + this.x + ", " + this.y + ")";
-      },
-    };
-
-    // Track the mouse position relative to the center of the container.
-    mouse.setOrigin(container);
-
-    //----------------------------------------------------
-
-    var counter = 0;
-    var refreshRate = 10;
-    var isTimeToUpdate = function () {
-      return counter++ % refreshRate === 0;
-    };
-
-    //----------------------------------------------------
-
-    var onMouseEnterHandler = function (event) {
+  var onMouseEnterHandler = function (event) {
+    update(event);
+  };
+  var onMouseLeaveHandler = function () {
+    inner.style = "";
+  };
+  var onMouseMoveHandler = function (event) {
+    if (isTimeToUpdate()) {
       update(event);
-    };
+    }
+  };
 
-    var onMouseLeaveHandler = function () {
-      inner1.style = "";
-      inner2.style = "";
-      inner3.style = "";
-      inner4.style = "";
-    };
+  container.onmouseenter = onMouseEnterHandler;
+  container.onmouseleave = onMouseLeaveHandler;
+  container.onmousemove = onMouseMoveHandler;
 
-    var onMouseMoveHandler = function (event) {
-      if (isTimeToUpdate()) {
-        update(event);
-      }
-    };
+  var counter = 0;
+  var updateRate = 10;
+  var isTimeToUpdate = function () {
+    return counter++ % updateRate === 0;
+  };
 
-    //----------------------------------------------------
+  // Mouse
+  var mouse = {
+    _x: 0,
+    _y: 0,
+    x: 0,
+    y: 0,
+    updatePosition: function (event) {
+      var e = event || window.event;
+      this.x = e.clientX - this._x;
+      this.y = (e.clientY - this._y) * -1;
+    },
+    setOrigin: function (e) {
+      this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+      this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+    },
+    show: function () {
+      return "(" + this.x + ", " + this.y + ")";
+    },
+  };
+  // Track the mouse position relative to the center of the container.
+  mouse.setOrigin(container);
 
-    var update = function (event) {
-      mouse.updatePosition(event);
-      updateTransformStyle(
-        (mouse.y / inner1.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner1.offsetWidth / 2).toFixed(2),
-        (mouse.y / inner2.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner2.offsetWidth / 2).toFixed(2),
-        (mouse.y / inner3.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner3.offsetWidth / 2).toFixed(2),
-        (mouse.y / inner4.offsetHeight / 2).toFixed(2),
-        (mouse.x / inner4.offsetWidth / 2).toFixed(2)
-      );
-    };
+  var update = function (event) {
+    mouse.updatePosition(event);
+    updateTransformStyle(
+      (mouse.y / inner.offsetHeight / 2).toFixed(2),
+      (mouse.x / inner.offsetWidth / 2).toFixed(2)
+    );
+  };
 
-    var updateTransformStyle = function (x, y) {
-      var style1 = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
-      var style2 = "translateX(" + x * 8 + "px) translateY(" + y * 8 + "px)";
-      var style3 = "translateX(" + x * 2 + "px) translateY(" + y * 2 + "px)";
+  var updateTransformStyle = function (x, y) {
+    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+    inner.style.transform = style;
+    inner.style.webkitTransform = style;
+    inner.style.mozTransform = style;
+    inner.style.msTransform = style;
+    inner.style.oTransform = style;
+  };
+}
 
-      inner1.style.transform = style1;
-      inner1.style.webkitTransform = style1;
-      inner1.style.mozTranform = style1;
-      inner1.style.msTransform = style1;
-      inner1.style.oTransform = style1;
-
-      inner2.style.transform = style1;
-      inner2.style.webkitTransform = style1;
-      inner2.style.mozTranform = style1;
-      inner2.style.msTransform = style1;
-      inner2.style.oTransform = style1;
-
-      inner3.style.transform = style2;
-      inner3.style.webkitTransform = style2;
-      inner3.style.mozTranform = style2;
-      inner3.style.msTransform = style2;
-      inner3.style.oTransform = style2;
-
-      inner4.style.transform = style3;
-      inner4.style.webkitTransform = style3;
-      inner4.style.mozTranform = style3;
-      inner4.style.msTransform = style3;
-      inner4.style.oTransform = style3;
-    };
-
-    //--------------------------------------------------------
-
-    container.onmousemove = onMouseMoveHandler;
-    container.onmouseleave = onMouseLeaveHandler;
-    container.onmouseenter = onMouseEnterHandler;
-  })();
-
+$(document).ready(function () {
+  // $(".envelope").fadeOut(); //!!
   // Get the modal
   // When the user clicks on the button, open the modal
   $("#lesSaturnales").click(function () {
@@ -244,29 +207,28 @@ $(document).ready(function () {
 
 function hedgehogMove2() {
   const hedgehog = document.getElementById("hedgehog");
-  let posX = 0;
+  let posX = $(window).width() - 1;
   let posY = $(window).height() / 2;
   let offsetY = $(window).height() / 2; //valeur initiale mais qui change a chaque passage
   setInterval(frame, 4);
   function frame() {
     if (posX >= $(document).width()) {
       // clearInterval(id);
-      posX = 0 - hedgehog.width - Math.floor(Math.random() * 100); //5000
+      posX = 0 - hedgehog.width - Math.floor(Math.random() * 1500); //2500
       offsetY = Math.floor(
         Math.random() *
-          ($(window).height() * 0.8 - $(window).height() * 0.0 + 1) +
+          ($(window).height() * 0.2 - $(window).height() * 0.0 + 1) +
           $(window).height() * 0.0
       );
       // console.log("offsetY : " + offsetY);
     } else {
       posX++;
-      posY = Math.sin(posX / 500) * 120 + offsetY;
-      hedgehog.style.top = posY + "px";
+      posY = Math.sin(posX / 500) * 120 + offsetY + $(window).height() * 0.6;
       hedgehog.style.left = posX + "px";
+      hedgehog.style.top = posY + "px";
     }
   }
 }
-
 $(document).scroll(function () {
   let y = $(this).scrollTop();
   let documentHeight = $(document).height();
