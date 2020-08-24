@@ -214,7 +214,10 @@ function hedgehogMove2() {
   function frame() {
     if (posX >= $(document).width()) {
       // clearInterval(id);
-      posX = 0 - hedgehog.width - Math.floor(Math.random() * 1500); //2500
+      posX =
+        0 -
+        hedgehog.width -
+        Math.floor(Math.random() * 0.5 * $(window).width()); //2500
       offsetY = Math.floor(
         Math.random() *
           ($(window).height() * 0.2 - $(window).height() * 0.0 + 1) +

@@ -9,3 +9,4 @@ Site web de la compagnie Taftaf
 ### progression
 
 v2.1 evolution css style and animation
+v2.3 new landing page with two countainers and 2 animations, tour page gui update

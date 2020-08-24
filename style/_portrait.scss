@@ -19,7 +19,7 @@
 #portrait {
   background-color: $primary-color;
   margin: auto;
-  height: 80vh;
+  height: 100vh;
   @include flexCenter();
   flex-direction: column;
 }
@@ -29,8 +29,6 @@
   // z-index: 2;
   /* left: 20px; */
   margin: auto;
-  -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
-    drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
   filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
     drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
   transition: transform 0.4s, filter 0.4s ease-in-out;
@@ -38,8 +36,6 @@
 
 #portrait img:hover {
   filter: brightness(120%);
-  -webkit-filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
-    drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
   filter: drop-shadow(2px 2px 0 white) drop-shadow(-2px 2px 0 white)
     drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
 }
