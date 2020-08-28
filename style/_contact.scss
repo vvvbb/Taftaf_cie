@@ -32,6 +32,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden; //allow img to get out screen
+  // position: absolute;
 
   h3 {
     font-family: "Amatic SC", cursive;
@@ -68,80 +69,81 @@
   animation-fill-mode: forwards;
   top: 100vh;
 }
-
-.animateLeafPosition81 {
-  animation-name: animateLeaf81;
-  @keyframes animateLeaf81 {
-    0% {
-      top: 100vh;
+@media all and (min-width: 1200px) {
+  .animateLeafPosition81 {
+    animation-name: animateLeaf81;
+    @keyframes animateLeaf81 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 81vh;
+      }
     }
-    100% {
-      top: 81vh;
+  }
+
+  .animateLeafPosition82 {
+    animation-name: animateLeaf82;
+    @keyframes animateLeaf82 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 82vh;
+      }
+    }
+  }
+
+  .animateLeafPosition83 {
+    animation-name: animateLeaf83;
+    @keyframes animateLeaf83 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 83vh;
+      }
+    }
+  }
+
+  .animateLeafPosition84 {
+    animation-name: animateLeaf84;
+    @keyframes animateLeaf84 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 84vh;
+      }
+    }
+  }
+
+  .animateLeafPosition85 {
+    animation-name: animateLeaf85;
+    @keyframes animateLeaf85 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 85vh;
+      }
+    }
+  }
+
+  .animateLeafPosition86 {
+    animation-name: animateLeaf86;
+    @keyframes animateLeaf86 {
+      0% {
+        top: 100vh;
+      }
+      100% {
+        top: 86vh;
+      }
     }
   }
 }
 
-.animateLeafPosition82 {
-  animation-name: animateLeaf82;
-  @keyframes animateLeaf82 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 82vh;
-    }
-  }
-}
-
-.animateLeafPosition83 {
-  animation-name: animateLeaf83;
-  @keyframes animateLeaf83 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 83vh;
-    }
-  }
-}
-
-.animateLeafPosition84 {
-  animation-name: animateLeaf84;
-  @keyframes animateLeaf84 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 84vh;
-    }
-  }
-}
-
-.animateLeafPosition85 {
-  animation-name: animateLeaf85;
-  @keyframes animateLeaf85 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 85vh;
-    }
-  }
-}
-
-.animateLeafPosition86 {
-  animation-name: animateLeaf86;
-  @keyframes animateLeaf86 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 86vh;
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .animateLeafPosition81 {
     animation-name: animateLeaf81;
     @keyframes animateLeaf81 {

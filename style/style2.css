@@ -292,43 +292,43 @@
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-  width: 90%;
-  /* Could be more or less, depending on screen size */
-  margin: 2% auto;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.modal-content h2,
+.modal-content p {
+  margin: 0 1% 1em 1%;
+  text-align: justify;
 }
 
 .modal-center {
   text-align: center;
 }
 
-@media screen and (min-width: 1400px) {
-  .modal-content {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .modal-content {
-    width: 90%;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .modal-content {
-    width: 90%;
-    margin: auto;
-  }
-}
-
 /* The Close Button */
 .close {
-  /* color: #aaa; */
-  float: right;
-  /* font-size: 28px; */
+  position: absolute;
+  top: 0;
   /* font-weight: bold; */
-  font-size: 2.5em;
+  font-size: 4.5em;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
 .close:hover,
@@ -368,14 +368,44 @@
 /*.carousel div:nth-child(1) {
       display: block;
       margin: 0 5px;
-  }
-  
+  }  
   .carousel  div:nth-child(2) {
       display: block;
       margin: 0 5px;
       cursor:pointer;
   }
   */
+@media all and (min-width: 600px) {
+  .modal-content {
+    width: 98%;
+    height: auto;
+    margin: auto;
+  }
+  h2,
+  p {
+    margin-bottom: 1em;
+  }
+  .close {
+    font-size: 5em;
+    margin: 2%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  .modal-content {
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .modal-content {
+    margin: 2% 6%;
+    padding: 0px;
+  }
+}
+
 /*/////SECTION PORTRAIT*/
 #portrait_rect_left {
   position: absolute;
@@ -562,7 +592,6 @@
 
 /*/////SECTION GALLERIE*/
 #gallerie {
-  /* position: relative; */
   /* z-index: -1; */
   background-color: rgba(204, 51, 51, 0.99);
 }
@@ -703,145 +732,130 @@
   top: 100vh;
 }
 
-.animateLeafPosition81 {
-  -webkit-animation-name: animateLeaf81;
-          animation-name: animateLeaf81;
-}
-
-@-webkit-keyframes animateLeaf81 {
-  0% {
-    top: 100vh;
+@media all and (min-width: 1200px) {
+  .animateLeafPosition81 {
+    -webkit-animation-name: animateLeaf81;
+            animation-name: animateLeaf81;
   }
-  100% {
-    top: 81vh;
+  @-webkit-keyframes animateLeaf81 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 81vh;
+    }
   }
-}
-
-@keyframes animateLeaf81 {
-  0% {
-    top: 100vh;
+  @keyframes animateLeaf81 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 81vh;
+    }
   }
-  100% {
-    top: 81vh;
+  .animateLeafPosition82 {
+    -webkit-animation-name: animateLeaf82;
+            animation-name: animateLeaf82;
   }
-}
-
-.animateLeafPosition82 {
-  -webkit-animation-name: animateLeaf82;
-          animation-name: animateLeaf82;
-}
-
-@-webkit-keyframes animateLeaf82 {
-  0% {
-    top: 100vh;
+  @-webkit-keyframes animateLeaf82 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 82vh;
+    }
   }
-  100% {
-    top: 82vh;
+  @keyframes animateLeaf82 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 82vh;
+    }
   }
-}
-
-@keyframes animateLeaf82 {
-  0% {
-    top: 100vh;
+  .animateLeafPosition83 {
+    -webkit-animation-name: animateLeaf83;
+            animation-name: animateLeaf83;
   }
-  100% {
-    top: 82vh;
+  @-webkit-keyframes animateLeaf83 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 83vh;
+    }
   }
-}
-
-.animateLeafPosition83 {
-  -webkit-animation-name: animateLeaf83;
-          animation-name: animateLeaf83;
-}
-
-@-webkit-keyframes animateLeaf83 {
-  0% {
-    top: 100vh;
+  @keyframes animateLeaf83 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 83vh;
+    }
   }
-  100% {
-    top: 83vh;
+  .animateLeafPosition84 {
+    -webkit-animation-name: animateLeaf84;
+            animation-name: animateLeaf84;
   }
-}
-
-@keyframes animateLeaf83 {
-  0% {
-    top: 100vh;
+  @-webkit-keyframes animateLeaf84 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 84vh;
+    }
   }
-  100% {
-    top: 83vh;
+  @keyframes animateLeaf84 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 84vh;
+    }
   }
-}
-
-.animateLeafPosition84 {
-  -webkit-animation-name: animateLeaf84;
-          animation-name: animateLeaf84;
-}
-
-@-webkit-keyframes animateLeaf84 {
-  0% {
-    top: 100vh;
+  .animateLeafPosition85 {
+    -webkit-animation-name: animateLeaf85;
+            animation-name: animateLeaf85;
   }
-  100% {
-    top: 84vh;
+  @-webkit-keyframes animateLeaf85 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 85vh;
+    }
   }
-}
-
-@keyframes animateLeaf84 {
-  0% {
-    top: 100vh;
+  @keyframes animateLeaf85 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 85vh;
+    }
   }
-  100% {
-    top: 84vh;
+  .animateLeafPosition86 {
+    -webkit-animation-name: animateLeaf86;
+            animation-name: animateLeaf86;
   }
-}
-
-.animateLeafPosition85 {
-  -webkit-animation-name: animateLeaf85;
-          animation-name: animateLeaf85;
-}
-
-@-webkit-keyframes animateLeaf85 {
-  0% {
-    top: 100vh;
+  @-webkit-keyframes animateLeaf86 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 86vh;
+    }
   }
-  100% {
-    top: 85vh;
-  }
-}
-
-@keyframes animateLeaf85 {
-  0% {
-    top: 100vh;
-  }
-  100% {
-    top: 85vh;
-  }
-}
-
-.animateLeafPosition86 {
-  -webkit-animation-name: animateLeaf86;
-          animation-name: animateLeaf86;
-}
-
-@-webkit-keyframes animateLeaf86 {
-  0% {
-    top: 100vh;
-  }
-  100% {
-    top: 86vh;
+  @keyframes animateLeaf86 {
+    0% {
+      top: 100vh;
+    }
+    100% {
+      top: 86vh;
+    }
   }
 }
 
-@keyframes animateLeaf86 {
-  0% {
-    top: 100vh;
-  }
-  100% {
-    top: 86vh;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .animateLeafPosition81 {
     -webkit-animation-name: animateLeaf81;
             animation-name: animateLeaf81;
@@ -1080,5 +1094,14 @@ iframe {
   right: 10px;
   top: 0px;
   padding: 10px;
+}
+
+#spectacle {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+.accordion {
+  scroll-snap-align: start;
 }
 /*# sourceMappingURL=style2.css.map */

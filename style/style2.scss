@@ -118,3 +118,22 @@ iframe {
   top: 0px;
   padding: 10px;
 }
+
+#spectacle {
+  // scroll-snap-type: x mandatory;
+  scroll-snap-type: y proximity;
+  // border: 3px ridge palevioletred;
+}
+.accordion {
+  scroll-snap-align: start;
+}
+
+html,
+body,
+#gallerie {
+  // scroll-snap-type: y mandatory;
+}
+section,
+#tour {
+  // scroll-snap-align: start;
+}

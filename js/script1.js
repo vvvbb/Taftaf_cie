@@ -2,6 +2,7 @@
 function handleDisplayModal(element) {
   $(".modal-content").fadeIn("slow");
   $(element).slideDown();
+  // $(element).css("display", "flex"); //display : flex //!!!
   $("body").css("overflow", "hidden");
 }
 //Refactoring function to close modal
@@ -275,6 +276,20 @@ $(document).scroll(function () {
     $(".card_js").css("bottom", portraitParallaxEffect / 8 + "px");
   }
 
+  //SNAP SCROLL TO TOUR AFTER MID SCROLL GALLERIE
+  let testAA = $("#gallerie").offset().top;
+  // console.log("testAA : " + testAA);
+  // console.log("y : " + y);
+  if (y > testAA * 1.05) {
+    // console.log("bingbingbing");
+    // $("html").animate(
+    //   {
+    //     scrollTop: $("#tour").offset().top,
+    //   },
+    //   1000
+    // );
+  }
+
   //HANDLE TOUR DIV OVER GALLERIE GRID
   let gallerieOffsetBottom =
     $("#gallerie").offset().top +
@@ -297,7 +312,7 @@ $(document).scroll(function () {
     });
   }
 
-  console.log("y : " + y);
+  // console.log("y : " + y);
   // let documentHeight = $(document).height();
   // console.log("documentHeight : " + documentHeight);
   let windowHeight = $(window).height();
