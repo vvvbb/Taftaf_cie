@@ -91,6 +91,7 @@ function animateContainer(container, inner) {
 }
 
 $(document).ready(function () {
+  $(".envelope").css("display", "none");
   // $(".envelope").fadeOut(); //!!
   // Get the modal
   // When the user clicks on the button, open the modal

@@ -63,8 +63,8 @@
 
 #inner1,
 #inner2 {
-  width: 18em;
-  height: 18em;
+  width: 40vh;
+  height: 40vh;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1%;
@@ -722,7 +722,7 @@
 
 #tour img {
   position: absolute;
-  bottom: 50px;
+  width: 100%;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: ease-in-out;
@@ -742,7 +742,7 @@
       top: 100vh;
     }
     100% {
-      top: 81vh;
+      top: 71vh;
     }
   }
   @keyframes animateLeaf81 {
@@ -750,7 +750,7 @@
       top: 100vh;
     }
     100% {
-      top: 81vh;
+      top: 71vh;
     }
   }
   .animateLeafPosition82 {
@@ -762,7 +762,7 @@
       top: 100vh;
     }
     100% {
-      top: 82vh;
+      top: 78vh;
     }
   }
   @keyframes animateLeaf82 {
@@ -770,7 +770,7 @@
       top: 100vh;
     }
     100% {
-      top: 82vh;
+      top: 78vh;
     }
   }
   .animateLeafPosition83 {
@@ -782,7 +782,7 @@
       top: 100vh;
     }
     100% {
-      top: 83vh;
+      top: 70vh;
     }
   }
   @keyframes animateLeaf83 {
@@ -790,7 +790,7 @@
       top: 100vh;
     }
     100% {
-      top: 83vh;
+      top: 70vh;
     }
   }
   .animateLeafPosition84 {
@@ -802,7 +802,7 @@
       top: 100vh;
     }
     100% {
-      top: 84vh;
+      top: 79vh;
     }
   }
   @keyframes animateLeaf84 {
@@ -810,7 +810,7 @@
       top: 100vh;
     }
     100% {
-      top: 84vh;
+      top: 79vh;
     }
   }
   .animateLeafPosition85 {
@@ -822,7 +822,7 @@
       top: 100vh;
     }
     100% {
-      top: 85vh;
+      top: 78vh;
     }
   }
   @keyframes animateLeaf85 {
@@ -830,7 +830,7 @@
       top: 100vh;
     }
     100% {
-      top: 85vh;
+      top: 78vh;
     }
   }
   .animateLeafPosition86 {
@@ -842,7 +842,7 @@
       top: 100vh;
     }
     100% {
-      top: 86vh;
+      top: 73vh;
     }
   }
   @keyframes animateLeaf86 {
@@ -850,130 +850,7 @@
       top: 100vh;
     }
     100% {
-      top: 86vh;
-    }
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .animateLeafPosition81 {
-    -webkit-animation-name: animateLeaf81;
-            animation-name: animateLeaf81;
-  }
-  @-webkit-keyframes animateLeaf81 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf81 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  .animateLeafPosition82 {
-    -webkit-animation-name: animateLeaf82;
-            animation-name: animateLeaf82;
-  }
-  @-webkit-keyframes animateLeaf82 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf82 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  .animateLeafPosition83 {
-    -webkit-animation-name: animateLeaf83;
-            animation-name: animateLeaf83;
-  }
-  @-webkit-keyframes animateLeaf83 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf83 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  .animateLeafPosition84 {
-    -webkit-animation-name: animateLeaf84;
-            animation-name: animateLeaf84;
-  }
-  @-webkit-keyframes animateLeaf84 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf84 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  .animateLeafPosition85 {
-    -webkit-animation-name: animateLeaf85;
-            animation-name: animateLeaf85;
-  }
-  @-webkit-keyframes animateLeaf85 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf85 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  .animateLeafPosition86 {
-    -webkit-animation-name: animateLeaf86;
-            animation-name: animateLeaf86;
-  }
-  @-webkit-keyframes animateLeaf86 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
-    }
-  }
-  @keyframes animateLeaf86 {
-    0% {
-      top: 100vh;
-    }
-    100% {
-      top: 69vh;
+      top: 73vh;
     }
   }
 }
