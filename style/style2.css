@@ -316,6 +316,11 @@
   text-align: justify;
 }
 
+.modal-content h2 {
+  font-family: "Amatic SC", cursive;
+  font-size: 3rem;
+}
+
 .modal-center {
   text-align: center;
 }

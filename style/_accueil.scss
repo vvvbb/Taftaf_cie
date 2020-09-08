@@ -96,10 +96,10 @@
     drop-shadow(2px -2px 0 white) drop-shadow(-2px -2px 0 white);
 }
 @media screen and (min-width: 900px) {
-  #hedgehog {
-    // border: 10px ridge palegreen;
-    // width: 100px;
-  }
+  // #hedgehog {
+  //   // border: 10px ridge palegreen;
+  //   // width: 100px;
+  // }
 }
 
 #cloud1 {
@@ -112,11 +112,11 @@
   animation-timing-function: linear;
 }
 @media screen and (min-width: 900px) {
-  #cloud1 {
-    // border: 10px ridge palegreen;
-    // max-width: 300px;
-    // width: 100px;
-  }
+  // #cloud1 {
+  //   // border: 10px ridge palegreen;
+  //   // max-width: 300px;
+  //   // width: 100px;
+  // }
 }
 
 @keyframes cloudMove {
