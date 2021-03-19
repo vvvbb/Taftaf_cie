@@ -1,6 +1,6 @@
 /*/////SECTION ACCUEIL*/
 #accueil {
-  background-color: $primary-color;
+  // background-color: $primary-color;
   perspective: 50px;
   margin: auto;
   height: 100vh;
@@ -136,3 +136,95 @@
     // transform: scale(1) translateY(-400px);
   }
 }
+
+
+
+// 
+
+.wrapper {
+  // width: 400px;
+  // height: 400px;
+  // background: #fff;
+  position: relative;
+  overflow:hidden;
+  border-radius: 40px;
+  // position:absolute;
+
+  width :100vw;
+  height:100vh;
+ 
+  z-index:-4;
+}
+
+.wrapper div {
+
+  position: absolute;
+  filter: blur(60px);
+  opacity: 0.8;
+}
+
+
+// Blurred animated shapes
+
+.animated {
+  position: absolute;
+
+
+
+  .one {
+    // outline: 3px double greenyellow;
+    border-radius: 100%;
+    width: 60vw;
+    height: 60vw;
+    background-color: #373372;
+    background-color: #dfae75;
+    // background-color: blue;
+    // opacity: 0.5;
+    left:10%;
+    top:-30%;
+    z-index: 3;
+    animation: fly 12s linear infinite;
+    transform:rotate(0) translate(20%) rotate(0);
+  }
+
+  .two {
+    // outline: 3px double hotpink;
+    width: 50vw;
+    height: 80vh;
+    background-color: #7C336C;
+    background-color: #dfae75;
+    // background-color: red;
+    bottom:3%;
+    left:8%;
+    animation: fly 5s linear infinite;
+
+  }
+
+  .three {
+    // outline: 3px double darkcyan;
+    border-radius: 100%;
+    width: 45vw;
+    height: 45vw;
+    bottom:-80px;
+    right:-100px;
+    background-color: #B3588A;
+    background-color: #dfae75;
+    // background-color: green;
+    animation: flyPlus 8s linear infinite;
+    transform:rotate(0) translate(10%) rotate(0);
+  }
+}
+
+
+@keyframes fly {
+  100% {
+    transform:rotate(1turn) translate(100px) rotate(-1turn);
+  }
+}
+
+@keyframes flyPlus {
+  100% {
+    transform:rotate(-1turn) translate(100px) rotate(1turn);
+  }
+}
+
