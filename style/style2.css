@@ -31,7 +31,8 @@
   text-decoration: underline;
   -webkit-text-decoration-color: #d95e2b;
           text-decoration-color: #d95e2b;
-  text-decoration-thickness: 0.5px;
+  text-decoration-thickness: 0.5rem;
+  text-underline-offset: 20px;
   z-index: 1;
 }
 
