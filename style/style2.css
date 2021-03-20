@@ -152,10 +152,10 @@
 
 .wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 40px;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  border-radius: 40px;
   z-index: -4;
 }
 
@@ -167,7 +167,7 @@
   position: absolute;
 }
 
-.animated .one {
+.animated .circle-one {
   width: 40vw;
   height: 40vw;
   border-radius: 100%;
@@ -183,7 +183,7 @@
           transform: rotate(0) translate(100px) rotate(0);
 }
 
-.animated .two {
+.animated .circle-two {
   width: 50vw;
   height: 80vh;
   border-radius: 100%;
@@ -200,7 +200,7 @@
           transform: rotate(0) translate(100px) rotate(0);
 }
 
-.animated .three {
+.animated .circle-three {
   width: 45vw;
   height: 45vw;
   border-radius: 100%;

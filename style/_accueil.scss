@@ -139,38 +139,24 @@
 
 
 
-// 
-
 .wrapper {
-  // width: 400px;
-  // height: 400px;
-  // background: #fff;
   position: relative;
-  overflow:hidden;
-  border-radius: 40px;
-  // position:absolute;
-
   width :100vw;
   height:100vh;
- 
+  overflow:hidden;
+  border-radius: 40px;
   z-index:-4;
 }
 
 .wrapper div {
-
   position: absolute;
-  // opacity: 0.8;
 }
 
-
 // Blurred animated shapes
-
 .animated {
   position: absolute;
 
-
-
-  .one {
+  .circle-one {
     width: 40vw;
     height: 40vw;
     border-radius: 100%;
@@ -183,9 +169,7 @@
     transform:rotate(0) translate(100px) rotate(0);
   }
 
-  .two {
-    // display: none;
-    // outline: 3px double hotpink;
+  .circle-two {
     width: 50vw;
     height: 80vh;
     border-radius: 100%;
@@ -197,13 +181,9 @@
     opacity: 0.5;
     animation: fly 5s linear infinite;
     transform:rotate(0) translate(100px) rotate(0);
-
-
   }
 
-  .three {
-    // display: none;
-    // outline: 3px double darkcyan;
+  .circle-three {
     width: 45vw;
     height: 45vw;
     border-radius: 100%;
@@ -218,7 +198,6 @@
   }
 }
 
-
 @keyframes fly {
   100% {
     transform:rotate(1turn) translate(100px) rotate(-1turn);
@@ -230,4 +209,3 @@
     transform:rotate(-1turn) translate(200px) rotate(1turn);
   }
 }
-
