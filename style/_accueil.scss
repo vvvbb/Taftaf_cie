@@ -159,8 +159,7 @@
 .wrapper div {
 
   position: absolute;
-  filter: blur(60px);
-  opacity: 0.8;
+  // opacity: 0.8;
 }
 
 
@@ -172,46 +171,50 @@
 
 
   .one {
-    // outline: 3px double greenyellow;
+    width: 40vw;
+    height: 40vw;
     border-radius: 100%;
-    width: 60vw;
-    height: 60vw;
+    left:-5%;
+    top:0%;
     background-color: #373372;
-    background-color: #dfae75;
-    // background-color: blue;
-    // opacity: 0.5;
-    left:10%;
-    top:-30%;
-    z-index: 3;
+    filter: blur(150px);
+    opacity: 0.3;
     animation: fly 12s linear infinite;
-    transform:rotate(0) translate(20%) rotate(0);
+    transform:rotate(0) translate(100px) rotate(0);
   }
 
   .two {
+    // display: none;
     // outline: 3px double hotpink;
     width: 50vw;
     height: 80vh;
+    border-radius: 100%;
+    left:50%;
+    top:50%;
     background-color: #7C336C;
-    background-color: #dfae75;
-    // background-color: red;
-    bottom:3%;
-    left:8%;
+    background-color: $primary-color;
+    filter: blur(150px);
+    opacity: 0.5;
     animation: fly 5s linear infinite;
+    transform:rotate(0) translate(100px) rotate(0);
+
 
   }
 
   .three {
+    // display: none;
     // outline: 3px double darkcyan;
-    border-radius: 100%;
     width: 45vw;
     height: 45vw;
-    bottom:-80px;
-    right:-100px;
+    border-radius: 100%;
+    left: 80%;
+    top : 10%;
     background-color: #B3588A;
     background-color: #dfae75;
-    // background-color: green;
+    filter: blur(100px);
+    opacity: 0.5;
     animation: flyPlus 8s linear infinite;
-    transform:rotate(0) translate(10%) rotate(0);
+    transform:rotate(0) translate(200px) rotate(0);
   }
 }
 
@@ -224,7 +227,7 @@
 
 @keyframes flyPlus {
   100% {
-    transform:rotate(-1turn) translate(100px) rotate(1turn);
+    transform:rotate(-1turn) translate(200px) rotate(1turn);
   }
 }
 
