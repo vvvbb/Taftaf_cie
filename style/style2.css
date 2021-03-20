@@ -176,7 +176,7 @@
   background-color: #373372;
   -webkit-filter: blur(150px);
           filter: blur(150px);
-  opacity: 0.3;
+  opacity: 0.2;
   -webkit-animation: fly 12s linear infinite;
           animation: fly 12s linear infinite;
   -webkit-transform: rotate(0) translate(100px) rotate(0);
@@ -193,7 +193,7 @@
   background-color: rgba(204, 51, 51, 0.99);
   -webkit-filter: blur(150px);
           filter: blur(150px);
-  opacity: 0.5;
+  opacity: 0.3;
   -webkit-animation: fly 5s linear infinite;
           animation: fly 5s linear infinite;
   -webkit-transform: rotate(0) translate(100px) rotate(0);

@@ -164,7 +164,7 @@
     top:0%;
     background-color: #373372;
     filter: blur(150px);
-    opacity: 0.3;
+    opacity: 0.2;
     animation: fly 12s linear infinite;
     transform:rotate(0) translate(100px) rotate(0);
   }
@@ -178,7 +178,7 @@
     background-color: #7C336C;
     background-color: $primary-color;
     filter: blur(150px);
-    opacity: 0.5;
+    opacity: 0.3;
     animation: fly 5s linear infinite;
     transform:rotate(0) translate(100px) rotate(0);
   }
